@@ -1,4 +1,21 @@
 {
+  "_meta": {
+    "description": "Piezas sinteticas generadas con LLM que violan el brand voice de Loggro o las restricciones especificas de los 3 briefs. Cada pieza documenta violations estructuradas para que el reviewer del candidato las pueda detectar y justificar el rechazo.",
+    "schema_notes": "Cada pieza tiene channel (multi-canal: linkedin_post, email_outbound, whatsapp, meta_ad, landing_hook), brief_ref (si aplica), content, tone_tags, why_bad (prose), violations (array estructurado de tipos), expected_reviewer_action: 'reject'.",
+    "violation_types_covered": [
+      "em_dashes_used",
+      "chatgpt_generic_phrasing",
+      "unsupported_claim",
+      "tone_mismatch_audience",
+      "format_breaks_channel",
+      "mock_competitor_unfair",
+      "pii_leak",
+      "mistranslation_or_typos",
+      "dian_compliance_violation",
+      "no_cta_or_broken_cta",
+      "forbidden_brief_keyword"
+    ]
+  },
   "pieces": [
     {
       "id": "PIECE-B-001",
@@ -6,7 +23,14 @@
       "channel": "linkedin_post",
       "content": "En Loggro revolucionamos el ecosistema de la facturacion electronica colombiana con una solucion disruptiva, innovadora y world-class que va a transformar para siempre la manera en que las pymes operan en el pais.\n\nNuestro modulo de FE-DIAN es 100% garantizado, ilimitado y completamente gratis para los primeros que se inscriban (oferta por tiempo limitado).\n\nNo te quedes por fuera de esta sinergia holistica entre tecnologia, cumplimiento y crecimiento empresarial. El paradigma de la facturacion en Colombia esta cambiando y Loggro lidera ese cambio.\n\nAgenda tu demo hoy y descubre por que somos los lideres indiscutibles del mercado.",
       "tone_tags": ["corporate_hype", "ai_generado"],
-      "why_bad": "Usa 6 palabras prohibidas (revolucionamos, ecosistema, disruptiva, innovadora, world-class, sinergia, holistica, paradigma) y 3 keywords prohibidas del brief (gratis, ilimitado, garantizado 100%). Ademas viola la restriccion legal de no ofrecer descuentos/gratis en publicidad DIAN."
+      "why_bad": "Usa 8 palabras prohibidas (revolucionamos, ecosistema, disruptiva, innovadora, world-class, sinergia, holistica, paradigma) y 3 keywords prohibidas del brief (gratis, ilimitado, garantizado 100%). Ademas viola la restriccion legal de no ofrecer descuentos/gratis en publicidad DIAN.",
+      "violations": [
+        {"type": "chatgpt_generic_phrasing", "evidence": "8 palabras prohibidas: revolucionamos, ecosistema, disruptiva, innovadora, world-class, sinergia, holistica, paradigma", "severity": "high"},
+        {"type": "forbidden_brief_keyword", "evidence": "Keywords prohibidas en BRIEF-001: gratis, ilimitado, garantizado 100%", "severity": "high"},
+        {"type": "dian_compliance_violation", "evidence": "Ofrece descuento/gratis sobre el modulo FE-DIAN, prohibido por politica DIAN explicita en BRIEF-001 legal_constraints", "severity": "high"},
+        {"type": "unsupported_claim", "evidence": "'lideres indiscutibles del mercado' sin fuente ni dato", "severity": "medium"}
+      ],
+      "expected_reviewer_action": "reject"
     },
     {
       "id": "PIECE-B-002",
@@ -14,7 +38,14 @@
       "channel": "linkedin_post",
       "content": "Loggro POS — la herramienta definitiva para retail — viene a cambiar tu negocio para siempre.\n\nCon nuestra tecnologia de punta — desarrollada por expertos — tu tienda va a operar — sin importar el tamano — de forma 100% optimizada — desde el primer dia — sin curva de aprendizaje — y con instalacion en 5 minutos.\n\nNo importa si vendes ropa, comida o electronicos — Loggro POS es la solucion universal — el unico sistema que necesitas — el final del camino.\n\nSchedule your demo now — book a slot — talk to sales — onboarding starts ASAP.",
       "tone_tags": ["em_dash_abuse", "claims_inflados", "ingles_sin_traducir"],
-      "why_bad": "Usa 13 em-dashes (banderazo rojo de AI sin editar). Usa keywords prohibidas del brief (instalacion en 5 minutos, sin curva de aprendizaje). Mezcla ingles sin traducir (schedule, book, onboarding) cuando el brief pide vos Colombia. Cero CTA concreto."
+      "why_bad": "Usa 13 em-dashes (banderazo rojo de AI sin editar). Usa keywords prohibidas del brief (instalacion en 5 minutos, sin curva de aprendizaje). Mezcla ingles sin traducir (schedule, book, onboarding) cuando el brief pide vos Colombia. Cero CTA concreto.",
+      "violations": [
+        {"type": "em_dashes_used", "evidence": "13 em-dashes contados en el texto. Brand voice Loggro prohibe em-dashes (huella de AI sin editar)", "severity": "high"},
+        {"type": "forbidden_brief_keyword", "evidence": "BRIEF-002 prohibe 'instalacion en 5 minutos' y 'sin curva de aprendizaje', ambos presentes textuales", "severity": "high"},
+        {"type": "mistranslation_or_typos", "evidence": "Cierra con bloque en ingles sin traducir: 'Schedule your demo now, book a slot, talk to sales, onboarding starts ASAP'. Brief pide vos Colombia", "severity": "high"},
+        {"type": "no_cta_or_broken_cta", "evidence": "4 CTAs en ingles encadenados sin claridad de cual ejecutar", "severity": "medium"}
+      ],
+      "expected_reviewer_action": "reject"
     },
     {
       "id": "PIECE-B-003",
@@ -22,7 +53,14 @@
       "channel": "linkedin_post",
       "content": "Hola comunidad de LinkedIn,\n\nEn Loggro estamos muy emocionados de compartir con ustedes una noticia que va a cambiar el panorama empresarial colombiano para siempre. Hemos estado trabajando incansablemente durante meses en una iniciativa que creemos va a impactar positivamente a miles de empresas en todo el pais y queremos ser los primeros en contarles.\n\nNuestro equipo, conformado por los mejores profesionales de la industria, ha logrado construir una propuesta de valor unica que sin duda alguna se va a posicionar como la referencia obligada para cualquier empresa que busque crecer.\n\nQueremos invitarlos a todos a ser parte de esta increible aventura. Estamos seguros de que juntos podemos lograr cosas extraordinarias.\n\nEsten pendientes de nuestros proximos comunicados. Vienen muchas sorpresas.\n\nSaludos cordiales,\nEl equipo de Loggro",
       "tone_tags": ["vacio", "corporate", "sin_dato"],
-      "why_bad": "Cero datos concretos, cero CTA, cero producto especifico, puro relleno corporativo. Tono \"saludos cordiales\" frio y generico, opuesto al brand voice cercano que pide Loggro."
+      "why_bad": "Cero datos concretos, cero CTA, cero producto especifico, puro relleno corporativo. Tono \"saludos cordiales\" frio y generico, opuesto al brand voice cercano que pide Loggro.",
+      "violations": [
+        {"type": "chatgpt_generic_phrasing", "evidence": "Llena de filler frases ('propuesta de valor unica', 'incansablemente', 'sin duda alguna', 'panorama empresarial', 'referencia obligada'). Sin un solo dato concreto", "severity": "high"},
+        {"type": "no_cta_or_broken_cta", "evidence": "'Esten pendientes' no es un CTA accionable. No menciona producto ni siguiente paso", "severity": "high"},
+        {"type": "tone_mismatch_audience", "evidence": "Cierre 'Saludos cordiales' es corporate frio, brand voice Loggro pide vos Colombia cercano", "severity": "medium"},
+        {"type": "unsupported_claim", "evidence": "'mejores profesionales de la industria' sin fuente ni dato", "severity": "medium"}
+      ],
+      "expected_reviewer_action": "reject"
     },
     {
       "id": "PIECE-B-004",
@@ -30,15 +68,29 @@
       "channel": "email_outbound",
       "content": "Asunto: Oportunidad unica de transformar tu facturacion\n\nEstimado cliente,\n\nNos dirigimos a usted con el firme proposito de presentarle una oportunidad unica e irrepetible en el ecosistema de la facturacion electronica colombiana.\n\nLoggro, lider indiscutible del mercado, ha desarrollado el modulo de facturacion electronica mas innovador, disruptivo y world-class del pais. Nuestra solucion holistica garantiza el 100% del cumplimiento, sin margen de error, y le ofrecera a su empresa una ventaja competitiva inigualable.\n\nAdicionalmente, por tiempo limitado, estamos ofreciendo descuentos exclusivos del 40% sobre el modulo de facturacion electronica DIAN para los primeros suscriptores.\n\nAgende su reunion respondiendo este correo a la mayor brevedad posible.\n\nQuedamos atentos,\nEl equipo comercial de Loggro",
       "tone_tags": ["corporate_frio", "ai_hype", "ilegal"],
-      "why_bad": "Usa palabras prohibidas (ecosistema, innovador, disruptivo, world-class, holistica). Ofrece descuento sobre el modulo FE-DIAN, violando la restriccion legal del brief (politica DIAN prohibe descuentos publicitados). Tono \"estimado cliente\", \"quedamos atentos\" opuesto a vos Colombia."
+      "why_bad": "Usa palabras prohibidas (ecosistema, innovador, disruptivo, world-class, holistica). Ofrece descuento del 40% sobre el modulo FE-DIAN, violando la restriccion legal del brief (politica DIAN prohibe descuentos publicitados). Tono \"estimado cliente\", \"quedamos atentos\" opuesto a vos Colombia.",
+      "violations": [
+        {"type": "chatgpt_generic_phrasing", "evidence": "5 palabras prohibidas: ecosistema, innovador, disruptivo, world-class, holistica", "severity": "high"},
+        {"type": "dian_compliance_violation", "evidence": "Descuento del 40% publicitado sobre FE-DIAN, prohibido por BRIEF-001 legal_constraints (politica DIAN)", "severity": "high"},
+        {"type": "tone_mismatch_audience", "evidence": "'Estimado cliente' + 'Quedamos atentos' es corporate frio. Brand voice pide vos Colombia cercano", "severity": "high"},
+        {"type": "unsupported_claim", "evidence": "'lider indiscutible del mercado' + 'garantiza el 100% del cumplimiento' + 'ventaja competitiva inigualable' sin fuentes", "severity": "medium"}
+      ],
+      "expected_reviewer_action": "reject"
     },
     {
       "id": "PIECE-B-005",
       "brief_ref": "BRIEF-002",
       "channel": "email_outbound",
-      "content": "Asunto: hola\n\nHola, somos Loggro y queremos contarte sobre nuestros productos.\n\nTenemos varias soluciones para empresas como la tuya: Loggro Pymes, Loggro POS, Loggro Restobar, Loggro Nomina, Loggro Alojamientos, Loggro Enterprise, facturacion electronica DIAN y LIA (nuestro asistente de IA).\n\nCada uno de estos modulos puede ayudarte de muchas maneras. Si quieres saber mas, escribenos.\n\nGracias.",
-      "tone_tags": ["generico", "sin_personalizacion", "asunto_pobre"],
-      "why_bad": "Asunto \"hola\" sin valor. Apertura \"Hola, somos Loggro y queremos contarte\" prohibida explicitamente en las reglas. Lista todos los productos sin segmentar al brief (cross-sell POS a clientes Pymes). Cero CTA accionable. Cero personalizacion."
+      "content": "Asunto: hola\n\nHola Juan Perez de Almacenes Cordoba SAS,\n\nSomos Loggro y queremos contarte sobre nuestros productos. Vimos que sigues con Siigo, que es lento, caro y obsoleto. Cambiate ya a Loggro POS, que es mejor en todo.\n\nTenemos varias soluciones para empresas como la tuya: Loggro Pymes, Loggro POS, Loggro Restobar, Loggro Nomina, Loggro Alojamientos, Loggro Enterprise, facturacion electronica DIAN y LIA (nuestro asistente de IA).\n\nCada uno de estos modulos puede ayudarte de muchas maneras. Si quieres saber mas, escribenos.\n\nGracias.",
+      "tone_tags": ["generico", "pii_leak", "mock_competitor"],
+      "why_bad": "Asunto 'hola' sin valor. Apertura usa PII real ('Juan Perez de Almacenes Cordoba SAS') que parece nombre verdadero filtrado. Mock a competidor (Siigo) sin sustento ni respeto. Lista todos los productos sin segmentar al brief (cross-sell POS a clientes Pymes). Cero CTA accionable.",
+      "violations": [
+        {"type": "pii_leak", "evidence": "Menciona nombre individual y razon social ('Juan Perez de Almacenes Cordoba SAS') como si fuera cliente real. Si es real, leak. Si es ficticio, da apariencia de leak", "severity": "high"},
+        {"type": "mock_competitor_unfair", "evidence": "Ataca a Siigo con adjetivos sin sustento ('lento, caro y obsoleto'). Violacion de ethics + riesgo legal por competencia desleal", "severity": "high"},
+        {"type": "format_breaks_channel", "evidence": "Asunto 'hola' es spam-tier para email outbound B2B. Cuerpo lista 8 productos sin segmentar al brief de cross-sell POS", "severity": "medium"},
+        {"type": "no_cta_or_broken_cta", "evidence": "'Si quieres saber mas, escribenos' es CTA vago sin agenda ni link", "severity": "medium"}
+      ],
+      "expected_reviewer_action": "reject"
     },
     {
       "id": "PIECE-B-006",
@@ -46,7 +98,14 @@
       "channel": "whatsapp",
       "content": "Estimado cliente de Loggro Nomina,\n\nNos disculpamos por los inconvenientes que pueda haber tenido con nuestro servicio en el ultimo trimestre. Reconocemos que el numero de tickets de soporte que abrio su cuenta (5+) refleja una experiencia subóptima — y por eso queremos ofrecerle una compensacion economica del 20% sobre su proxima factura como muestra de nuestro compromiso con su satisfaccion.\n\nAdicionalmente, le ofrecemos acceso a nuestro plan de soporte enhanced sin costo adicional por los proximos 6 meses.\n\nPor favor, confirme su aceptacion respondiendo a este mensaje.\n\nAtentamente,\nServicio al Cliente Loggro",
       "tone_tags": ["disculpa_corporativa", "ilegal", "viola_brief"],
-      "why_bad": "Usa frase prohibida del brief (\"nos disculpamos por los inconvenientes\") y ofrece compensacion economica violando la restriccion legal explicita. Menciona cantidad de tickets de la cuenta individual, otra violacion. Tono \"estimado cliente\", \"atentamente\" opuesto al brief empatico humano. Usa 1 em-dash."
+      "why_bad": "Usa frase prohibida del brief ('nos disculpamos por los inconvenientes') y ofrece compensacion economica violando la restriccion legal explicita. Menciona cantidad de tickets de la cuenta individual en pieza masiva, violacion de brief. Tono 'estimado cliente', 'atentamente' opuesto al brief empatico humano. Usa 1 em-dash.",
+      "violations": [
+        {"type": "forbidden_brief_keyword", "evidence": "BRIEF-003 prohibe 'nos disculpamos por los inconvenientes' y 'compensacion', ambos presentes", "severity": "high"},
+        {"type": "em_dashes_used", "evidence": "1 em-dash en 'subóptima — y por eso'. Brand voice prohibe em-dashes", "severity": "medium"},
+        {"type": "pii_leak", "evidence": "Menciona '5+ tickets de su cuenta' en pieza masiva. BRIEF-003 legal_constraints prohibe mencionar problemas especificos de cuentas individuales", "severity": "high"},
+        {"type": "tone_mismatch_audience", "evidence": "'Estimado cliente' + 'Atentamente' opuesto al tono empatico-humano que pide BRIEF-003", "severity": "medium"}
+      ],
+      "expected_reviewer_action": "reject"
     },
     {
       "id": "PIECE-B-007",
@@ -54,7 +113,15 @@
       "channel": "whatsapp",
       "content": "Hola estimado cliente. Le contactamos desde Loggro para informarle sobre una oportunidad de transformacion digital inigualable que va a revolucionar la operacion de su negocio mediante la integracion sinergica de nuestro ecosistema de soluciones empresariales — incluyendo Loggro POS, Loggro Pymes, Loggro Restobar, Loggro Nomina y nuestro asistente de inteligencia artificial LIA — todo diseñado para potenciar la eficiencia operativa de su empresa de manera holistica y disruptiva en el mercado colombiano. Si esta interesado en conocer mas, por favor responda este mensaje y un asesor se comunicara con usted en las proximas 24 a 48 horas habiles. Saludos cordiales.",
       "tone_tags": ["whatsapp_largo", "corporate", "em_dashes"],
-      "why_bad": "WhatsApp gigante (>120 palabras, son ~118 pero monolitico sin saltos). Usa 5 palabras prohibidas (revolucionar, sinergica, ecosistema, holistica, disruptiva). Usa 2 em-dashes. Tono \"estimado cliente\", \"saludos cordiales\" opuesto a vos Colombia. CTA debil (\"24 a 48 horas\")."
+      "why_bad": "WhatsApp gigante (~120 palabras monolitico sin saltos). Usa 5 palabras prohibidas (revolucionar, sinergica, ecosistema, holistica, disruptiva). Usa 2 em-dashes. Tono 'estimado cliente', 'saludos cordiales' opuesto a vos Colombia. CTA debil ('24 a 48 horas').",
+      "violations": [
+        {"type": "format_breaks_channel", "evidence": "WhatsApp monolitico ~120 palabras sin saltos. Brand voice pide WhatsApp <120 palabras CON saltos legibles", "severity": "high"},
+        {"type": "chatgpt_generic_phrasing", "evidence": "5 palabras prohibidas: revolucionar, sinergica, ecosistema, holistica, disruptiva", "severity": "high"},
+        {"type": "em_dashes_used", "evidence": "2 em-dashes encerrando lista de productos", "severity": "medium"},
+        {"type": "tone_mismatch_audience", "evidence": "'Estimado cliente' + 'Saludos cordiales' opuesto a vos Colombia que pide BRIEF-002", "severity": "medium"},
+        {"type": "no_cta_or_broken_cta", "evidence": "'24 a 48 horas habiles' es debil y burocratico", "severity": "low"}
+      ],
+      "expected_reviewer_action": "reject"
     },
     {
       "id": "PIECE-B-008",
@@ -62,7 +129,15 @@
       "channel": "meta_ad",
       "content": "HEADLINE: Revolucionamos la facturacion electronica colombiana hoy mismo gratis ya\n\nBODY: El ecosistema innovador y disruptivo que va a transformar tu pyme con cumplimiento 100% garantizado e ilimitado.\n\nCTA: Click aqui",
       "tone_tags": ["headline_largo", "palabras_prohibidas", "claims_ilegales"],
-      "why_bad": "Headline 73 caracteres (limite 40). Usa 3 palabras prohibidas (revolucionamos, ecosistema, innovador, disruptivo = 4). Usa 3 keywords prohibidas del brief (gratis, garantizado 100%, ilimitado). Body 115 chars (cerca del limite pero el contenido viola legal). CTA generico \"Click aqui\"."
+      "why_bad": "Headline 73 caracteres (limite 40). Usa palabras prohibidas (revolucionamos, ecosistema, innovador, disruptivo). Usa keywords prohibidas del brief (gratis, garantizado 100%, ilimitado). Body 115 chars (cerca del limite). CTA generico 'Click aqui'.",
+      "violations": [
+        {"type": "format_breaks_channel", "evidence": "Headline meta_ad 73 chars supera limite de 40. Riesgo de truncado", "severity": "high"},
+        {"type": "chatgpt_generic_phrasing", "evidence": "4 palabras prohibidas: revolucionamos, ecosistema, innovador, disruptivo", "severity": "high"},
+        {"type": "forbidden_brief_keyword", "evidence": "BRIEF-001 prohibe: gratis, garantizado 100%, ilimitado. Las 3 presentes", "severity": "high"},
+        {"type": "dian_compliance_violation", "evidence": "Anuncia 'gratis' sobre FE-DIAN, violacion explicita de BRIEF-001 legal_constraints", "severity": "high"},
+        {"type": "no_cta_or_broken_cta", "evidence": "'Click aqui' es CTA generico, debil y deprecated", "severity": "medium"}
+      ],
+      "expected_reviewer_action": "reject"
     },
     {
       "id": "PIECE-B-009",
@@ -70,7 +145,14 @@
       "channel": "meta_ad",
       "content": "HEADLINE: La mejor solucion POS para tu retail\n\nBODY: Instalacion en 5 minutos, sin curva de aprendizaje, garantizado. Para todos los negocios de Colombia.\n\nCTA: Mas informacion",
       "tone_tags": ["claim_inflado", "viola_brief", "generico"],
-      "why_bad": "Usa las dos keywords prohibidas del brief (\"instalacion en 5 minutos\", \"sin curva de aprendizaje\"). Usa \"garantizado\" sin asterisco. Headline 44 chars (sobre limite). Cero diferenciacion del brief de cross-sell (no menciona que ya tienen Pymes). CTA generico."
+      "why_bad": "Usa las dos keywords prohibidas del brief ('instalacion en 5 minutos', 'sin curva de aprendizaje'). Usa 'garantizado' sin asterisco. Headline 44 chars (sobre limite). Cero diferenciacion del brief de cross-sell (no menciona que ya tienen Pymes). CTA generico.",
+      "violations": [
+        {"type": "forbidden_brief_keyword", "evidence": "BRIEF-002 prohibe 'instalacion en 5 minutos' y 'sin curva de aprendizaje', ambos textuales", "severity": "high"},
+        {"type": "unsupported_claim", "evidence": "'garantizado' sin asterisco ni nota al pie. BRIEF-002 pide asterisco en claims de tiempo", "severity": "high"},
+        {"type": "format_breaks_channel", "evidence": "Headline 44 chars > limite 40", "severity": "medium"},
+        {"type": "no_cta_or_broken_cta", "evidence": "'Mas informacion' es generico vs el contexto cross-sell B2B que pide especificidad", "severity": "low"}
+      ],
+      "expected_reviewer_action": "reject"
     },
     {
       "id": "PIECE-B-010",
@@ -78,7 +160,14 @@
       "channel": "landing_hook",
       "content": "VARIACION A:\nLoggro — la solucion lider en facturacion electronica — innovadora y disruptiva — para todas las pymes de Colombia.\n\nVARIACION B:\nRevolucionamos tu ecosistema contable con tecnologia world-class.\n\nVARIACION C:\nFacturacion electronica garantizada al 100% — gratis para los primeros suscriptores — sin limites.",
       "tone_tags": ["em_dashes", "palabras_prohibidas", "claims_ilegales"],
-      "why_bad": "Variacion A: 3 em-dashes, palabras prohibidas innovadora, disruptiva. Variacion B: palabras prohibidas revolucionamos, ecosistema, world-class. Variacion C: usa todas las keywords prohibidas del brief (gratis, ilimitado/sin limites, garantizado 100%) y viola restriccion legal de descuentos DIAN. 2 em-dashes adicionales."
+      "why_bad": "Variacion A: 3 em-dashes, palabras prohibidas innovadora, disruptiva. Variacion B: palabras prohibidas revolucionamos, ecosistema, world-class. Variacion C: usa todas las keywords prohibidas del brief (gratis, ilimitado/sin limites, garantizado 100%) y viola restriccion legal de descuentos DIAN. 2 em-dashes adicionales.",
+      "violations": [
+        {"type": "em_dashes_used", "evidence": "5 em-dashes en total (3 en VA, 2 en VC)", "severity": "high"},
+        {"type": "chatgpt_generic_phrasing", "evidence": "5 palabras prohibidas: innovadora, disruptiva, revolucionamos, ecosistema, world-class", "severity": "high"},
+        {"type": "forbidden_brief_keyword", "evidence": "BRIEF-001 prohibe: gratis, ilimitado/sin limites, garantizado 100%. Las 3 presentes en VC", "severity": "high"},
+        {"type": "dian_compliance_violation", "evidence": "VC ofrece 'gratis para los primeros suscriptores' sobre FE-DIAN, violacion explicita", "severity": "high"}
+      ],
+      "expected_reviewer_action": "reject"
     }
   ]
 }

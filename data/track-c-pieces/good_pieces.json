@@ -1,84 +1,315 @@
 {
+  "_meta": {
+    "description": "Piezas reales extraidas de Meta Ad Library con keyword 'loggro' en Colombia (active_status=all). Ground truth positivo: anuncios que estan corriendo en produccion y reflejan el brand voice real de Loggro.",
+    "extracted_at": "2026-05-13",
+    "source": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=CO&q=loggro&search_type=keyword_unordered",
+    "extraction_method": "OpenTabs MCP + DOM parsing (Library ID + ad copy + landing + creative URL)",
+    "total_results_on_search": "~120 anuncios activos/inactivos para 'loggro' en CO al momento de extraccion",
+    "curation_criteria": "Diversidad de productos (Restobar, Pymes, POS, Enterprise, Alojamientos), mix imagen/video, mix B2C/B2B, todos sin em-dashes y con tono Colombia natural."
+  },
   "pieces": [
     {
-      "id": "PIECE-G-001",
-      "brief_ref": "BRIEF-001",
-      "channel": "linkedin_post",
-      "content": "El deadline de la DIAN no se mueve. Tu operacion contable, si.\n\nDesde noviembre 2026 todas las pymes que facturen mas de 3.500 UVT al ano deben emitir factura electronica bajo la resolucion 000165. Si todavia estas resolviendo esto por fuera de tu ERP, te toca elegir: parchar con un tercero o cerrarlo dentro del mismo sistema donde ya manejas tu contabilidad.\n\nEn Loggro Pymes ya hay mas de 4.200 empresas colombianas emitiendo facturacion electronica directo desde el modulo nativo, sin doble digitacion y con la trazabilidad que pide la DIAN.\n\nQue cambia para tu equipo de contabilidad:\n- La factura sale ya validada contra la DIAN, no hay reproceso.\n- El asiento contable queda armado en el mismo flujo.\n- Tu contador externo entra a la misma vista que tu, sin exportar archivos planos.\n\nNo es magia, es integracion: el modulo lleva tres anos certificado por la DIAN y lo soporta el mismo equipo que ya conoces.\n\nSi quieres revisar como se ve en tu caso, agenda 20 minutos con el equipo en el enlace del primer comentario.",
-      "tone_tags": ["profesional", "con_dato", "urgencia_controlada"],
-      "why_good": "Concreto (numero de UVT, resolucion 000165, 4.200 empresas), CTA claro, sin claims inflados, sin palabras prohibidas, sin em-dashes."
+      "id": "PIECE-001",
+      "source": "meta_ad_library",
+      "source_url": "https://www.facebook.com/ads/library/?id=950605917754663",
+      "library_id": "950605917754663",
+      "advertiser": "Loggro",
+      "platforms": ["facebook", "instagram"],
+      "format": "image",
+      "product_line": "Restobar",
+      "first_seen": "2026-04-29",
+      "still_active": true,
+      "multi_version": true,
+      "versions_count": 3,
+      "copy": {
+        "primary_text": "Administra tu Negocio Gastronómico desde un Sistema POS Completo y fácil de usar que te permita:\n\n- Generar Facturas Electrónicas y Facturas POS\n- Integrar tus domicilios con Delivery Apps\n- Manejar Carta digital y Pasarela de pagos\ny mucho más.\n\nSomos Loggro Restobar, elegido por más de 15.000 negocios.\n\n¡Solicita tu cotización!",
+        "headline": "Sistema POS para Negocios Gastronómicos",
+        "description": "Sistema POS para Negocios Gastronómicos",
+        "cta_button": "Get Quote"
+      },
+      "visual_description": "Imagen estatica vertical (338x600) con branding Loggro Restobar, UI de POS y mockup gastronomico.",
+      "landing_destination": "https://promo.loggro.com/software-para-restaurantes?utm_campaign=Restobar035_Ventanueva2024_similares_Adv_Mix&utm_source=facebook&utm_medium=paidsocial",
+      "brand_voice_compliance": {
+        "no_em_dashes": true,
+        "claims_with_substance": true,
+        "tone_matches_audience": true,
+        "format_respects_channel": true
+      },
+      "why_good": "Bullets concretos con funcionalidades reales, claim cuantificado verificable ('15.000 negocios' coincide con cifra publica de Loggro), CTA accionable ('Solicita tu cotizacion'), sin em-dashes, sin AI hype. Tono comercial-cercano apropiado para dueño de restaurante.",
+      "screenshot_path": "data/track-c-pieces/screenshots/PIECE-001.jpg"
     },
     {
-      "id": "PIECE-G-002",
-      "brief_ref": "BRIEF-002",
-      "channel": "linkedin_post",
-      "content": "Un cliente de retail nos escribio el lunes: \"llevo tres anos con Loggro Pymes y nunca prendi el POS porque pense que era empezar de cero\".\n\nLo prendimos el martes. El miercoles ya estaba vendiendo desde caja con el mismo catalogo que ya tenia cargado en Pymes.\n\nEso es lo que mas nos cuesta explicar de Loggro POS: tu Loggro Pymes ya conoce tus productos. No vas a recargar inventario, no vas a recrear codigos, no vas a re-entrenar al cajero en una herramienta nueva. El POS se monta encima de lo que ya tienes y sincroniza el inventario en tiempo real.\n\nQue ganas concretamente:\n- Punto de venta conectado a tu contabilidad sin importar archivos.\n- Inventario que baja al instante con cada venta.\n- Cierre de caja que ya queda contabilizado.\n\nEl tiempo real de implementacion depende de cuantas tiendas y referencias manejes*, pero la mayoria de clientes Pymes lo tienen operando en menos de una semana.\n\nSi te interesa verlo con tus propios datos, comentame \"POS\" y te conecto con el equipo.\n\n*Tiempos sujetos a complejidad del catalogo y numero de puntos de venta.",
-      "tone_tags": ["vos_colombia", "storytelling", "cercano"],
-      "why_good": "Storytelling real, vos Colombia, claim de tiempo con asterisco como pide el brief, mandatory keywords cubiertas, CTA suave por comentario."
+      "id": "PIECE-002",
+      "source": "meta_ad_library",
+      "source_url": "https://www.facebook.com/ads/library/?id=1271315351374283",
+      "library_id": "1271315351374283",
+      "advertiser": "Loggro",
+      "platforms": ["facebook", "instagram"],
+      "format": "video",
+      "video_duration_seconds": 21,
+      "product_line": "Pymes",
+      "first_seen": "2026-04-29",
+      "still_active": true,
+      "multi_version": false,
+      "versions_count": 1,
+      "copy": {
+        "primary_text": "✍ ¿Todavía anotas tus ventas en un cuaderno?\n\nCon Loggro PYMES puedes controlar tus ventas, inventario, contabilidad y facturación electrónica desde un solo sistema. Fácil, legal y 100% en la nube.",
+        "headline": "Administra todo tu negocio desde un solo sistema",
+        "description": "El sistema todo en uno que usan miles de negocios como el tuyo en Colombia.",
+        "cta_button": "Get quote"
+      },
+      "visual_description": "Video vertical 21s con poster 1080x1080, muestra escritorio comercial migrando de cuaderno a UI de Loggro Pymes en pantalla.",
+      "landing_destination": "https://promo.loggro.com/ (PROMO.LOGGRO.COM display URL en el ad)",
+      "brand_voice_compliance": {
+        "no_em_dashes": true,
+        "claims_with_substance": true,
+        "tone_matches_audience": true,
+        "format_respects_channel": true
+      },
+      "why_good": "Hook conversacional con pregunta concreta para pyme tradicional ('¿anotas en cuaderno?'), beneficios listados de forma directa (ventas, inventario, contabilidad, facturacion electronica), claim '100% en la nube' es verificable, tono Colombia natural sin corporate hype.",
+      "screenshot_path": "data/track-c-pieces/screenshots/PIECE-002.jpg"
     },
     {
-      "id": "PIECE-G-003",
-      "brief_ref": null,
-      "channel": "linkedin_post",
-      "content": "Dato que nos sorprendio revisando la base de clientes este trimestre:\n\nEl 38% de las pymes colombianas que usan un ERP todavia hace su nomina en una hoja de calculo aparte.\n\nNo es porque no sepan que existe el modulo de nomina, es porque migrar les da miedo: temen perder historico, romper la conexion con el contador o que el equipo no se adapte.\n\nLas que finalmente migran a Loggro Nomina suelen reportar tres cosas despues de los primeros tres meses:\n1. Cierran la nomina en la mitad del tiempo (de 3 dias a 1.5 en promedio en nuestra base).\n2. Dejan de pagar recargos a la DIAN por correcciones tardias.\n3. El contador agradece, porque el archivo plano sale ya armado.\n\nSi estas en ese 38%, no estas atrasado, estas en buena compania. Pero el costo de seguir asi es mas alto del que parece.\n\nQue herramienta usas hoy para liquidar nomina? Te leo en comentarios.",
-      "tone_tags": ["profesional", "con_dato", "engagement_post"],
-      "why_good": "Abre con dato concreto, plantea problema real, CTA conversacional, sin claims inflados, sin em-dashes ni palabras prohibidas."
+      "id": "PIECE-003",
+      "source": "meta_ad_library",
+      "source_url": "https://www.facebook.com/ads/library/?id=943861674930860",
+      "library_id": "943861674930860",
+      "advertiser": "Loggro",
+      "platforms": ["facebook", "instagram"],
+      "format": "image",
+      "product_line": "Pymes",
+      "first_seen": "2026-04-29",
+      "still_active": true,
+      "multi_version": true,
+      "versions_count": 1,
+      "copy": {
+        "primary_text": "¿Pierdes tiempo gestionando nómina y contabilidad por separado? ⏳\n\nEste software para negocio Loggro Pymes lo hace todo en uno.\nAutomatiza procesos y toma decisiones con datos reales.\n\n🚀 Solicita tu demo y aprovecha el descuento.",
+        "headline": "Controla tu negocio hoy",
+        "description": "Integra Software de contabilidad y nómina",
+        "cta_button": "Get Quote"
+      },
+      "visual_description": "Imagen estatica 338x600 promocional con UI de modulo contable + nomina, CTA visible.",
+      "landing_destination": "https://promo.loggro.com/software-contable-pymes?utm_campaign=Pymes_029_Advantage_Mix&utm_source=facebook&utm_medium=paidsocial",
+      "brand_voice_compliance": {
+        "no_em_dashes": true,
+        "claims_with_substance": true,
+        "tone_matches_audience": true,
+        "format_respects_channel": true
+      },
+      "why_good": "Pregunta abre con dolor especifico (nomina + contabilidad por separado), propuesta concreta de consolidacion, CTA con beneficio (demo + descuento). Sin claims inflados, sin em-dashes.",
+      "screenshot_path": "data/track-c-pieces/screenshots/PIECE-003.jpg"
     },
     {
-      "id": "PIECE-G-004",
-      "brief_ref": "BRIEF-001",
-      "channel": "email_outbound",
-      "content": "Asunto: Tu modulo FE-DIAN, antes de noviembre\n\nHola [Nombre],\n\nTe escribo porque tu cuenta de Loggro Pymes todavia no tiene activado el modulo de facturacion electronica DIAN, y el deadline de la resolucion 000165 se cumple en noviembre 2026.\n\nEl modulo ya esta certificado, ya esta incluido en tu plan actual y se activa desde tu mismo entorno (no es una herramienta nueva, no es un proveedor externo). El equipo de implementacion te acompana en la configuracion del rango de numeracion DIAN y en la primera emision.\n\nQue necesitamos de tu lado:\n- 30 minutos con la persona que maneja la facturacion.\n- Tu resolucion de numeracion DIAN vigente.\n- Acceso al RUT de la empresa.\n\nSi te queda mas facil, agenda directo en mi calendario: [link]\n\nO respondeme con dos o tres horarios y lo cuadramos.\n\nGracias,\n[Nombre AE]\nLoggro\n\nP.D. Si ya estas trabajando con otro proveedor de FE, igual conversemos. El cumplimiento DIAN aplica sin importar quien emita, pero te puede convenir tener todo en un mismo sistema.",
-      "tone_tags": ["profesional", "outbound_personalizado", "concreto"],
-      "why_good": "Asunto especifico, propuesta clara, lista lo que necesita, doble CTA (calendario o respuesta), cierra con razon para conversar incluso si ya tiene proveedor."
+      "id": "PIECE-004",
+      "source": "meta_ad_library",
+      "source_url": "https://www.facebook.com/ads/library/?id=2154324092078571",
+      "library_id": "2154324092078571",
+      "advertiser": "Loggro",
+      "platforms": ["facebook", "instagram"],
+      "format": "image",
+      "product_line": "POS",
+      "first_seen": "2026-04-29",
+      "still_active": true,
+      "multi_version": true,
+      "versions_count": 1,
+      "copy": {
+        "primary_text": "¿Tu tienda sigue manejando el inventario en Excel? 😩\n\nCon Loggro POS controlas ventas, facturación e inventario desde la nube.\n\n📲 Accede desde tu celular o computador.\n\n👉 Haz clic y conoce cómo digitalizar tu negocio.",
+        "headline": "Tu negocio en la nube ☁️",
+        "description": "POS electrónico, facturación y contabilidad en un solo sistema.",
+        "cta_button": "Get Quote"
+      },
+      "visual_description": "Imagen estatica 338x600 con UI POS en celular y mockup de tienda retail.",
+      "landing_destination": "https://promo.loggro.com/sistema-pos-electronico?utm_source=facebook&utm_medium=paidsocial&utm_campaign=POS029_VetSimilares_Advantage_Mixto",
+      "brand_voice_compliance": {
+        "no_em_dashes": true,
+        "claims_with_substance": true,
+        "tone_matches_audience": true,
+        "format_respects_channel": true
+      },
+      "why_good": "Hook con dolor concreto (Excel para inventario), propuesta accionable, multi-dispositivo. Emojis funcionales no decorativos. Tono dueño-de-tienda apropiado.",
+      "screenshot_path": "data/track-c-pieces/screenshots/PIECE-004.jpg"
     },
     {
-      "id": "PIECE-G-005",
-      "brief_ref": "BRIEF-002",
-      "channel": "email_outbound",
-      "content": "Asunto: Vi que abriste el correo del POS, te ayudo a aterrizarlo\n\nHola [Nombre],\n\nVi que la semana pasada abriste el correo sobre Loggro POS pero no agendaste. No te voy a perseguir, solo te dejo el contexto por si te sirve decidir.\n\nTu cuenta de Loggro Pymes ya tiene cargados los [numero] productos que manejas. Si conectamos el POS, esos productos pasan automaticamente al punto de venta y el inventario empieza a bajar en tiempo real con cada factura POS que emitas.\n\nLo que mas escucho de clientes retail despues de prenderlo:\n- Se acaba la pelea de \"cuantas unidades hay realmente\".\n- El cierre de caja del dia ya queda contabilizado.\n- El cajero usa la misma interfaz independiente del local.\n\nNo necesitas migrar nada, no necesitas reentrenar a tu equipo en otra herramienta*.\n\nSi quieres una demo de 25 minutos con tus propios productos cargados, respondeme con el dia que te queda mejor esta semana.\n\nGracias,\n[Nombre AE]\n\n*Implementacion estandar entre 3 y 7 dias habiles segun complejidad del catalogo.",
-      "tone_tags": ["follow_up", "vos_colombia", "personalizado"],
-      "why_good": "Follow-up basado en comportamiento real (apertura previa), keywords obligatorias cubiertas, asterisco en claim de tiempo, CTA especifico."
+      "id": "PIECE-005",
+      "source": "meta_ad_library",
+      "source_url": "https://www.facebook.com/ads/library/?id=1570199168222465",
+      "library_id": "1570199168222465",
+      "advertiser": "Loggro",
+      "platforms": ["facebook", "instagram"],
+      "format": "video",
+      "video_duration_seconds": 22,
+      "product_line": "POS",
+      "first_seen": "2026-04-16",
+      "still_active": true,
+      "multi_version": true,
+      "versions_count": 1,
+      "copy": {
+        "primary_text": "😩 ¿A veces siente que su tienda se maneja sola?\n\nCon Loggro POS usted ve en tiempo real qué talla se está vendiendo, qué se está acabando y factura sin errores.\n\n📲 ¡Actívelo desde el celular o el computador!",
+        "headline": "Controle su tienda desde el celular",
+        "description": "Software para registrar ventas, administrar inventario y facturación",
+        "cta_button": "Get Quote"
+      },
+      "visual_description": "Video vertical 22s (poster 1080x1920) con UI POS en celular vendiendo en tienda de ropa, narrativa en vos formal colombiano (usted).",
+      "landing_destination": "https://promo.loggro.com/sistema-pos-electronico?utm_source=facebook&utm_medium=paidsocial&utm_campaign=POS034_FullAdv_Mix&utm_content=video_funcionalidades_v109",
+      "brand_voice_compliance": {
+        "no_em_dashes": true,
+        "claims_with_substance": true,
+        "tone_matches_audience": true,
+        "format_respects_channel": true
+      },
+      "why_good": "Usa 'usted' formal (atipico vs el resto, posiblemente targeting LatAm fuera de Bogota/Medellin), beneficios especificos para retail de ropa ('que talla se esta vendiendo'). Hook empatico-narrativo, no corporate.",
+      "screenshot_path": "data/track-c-pieces/screenshots/PIECE-005.jpg"
     },
     {
-      "id": "PIECE-G-006",
-      "brief_ref": "BRIEF-003",
-      "channel": "whatsapp",
-      "content": "Hola [Nombre], soy [Nombre CSM] del equipo de Loggro Nomina.\n\nVi que en el ultimo trimestre tu equipo abrio varios casos con soporte. Antes de que decidas nada, queria preguntarte directamente: que es lo que mas te esta costando con la nomina ahora mismo?\n\nTe escribimos porque te escuchamos, no porque toque el ciclo de renovacion.\n\nSi te queda 15 minutos esta semana, te quiero mostrar nuestro plan de soporte enhanced (canal directo con un especialista asignado, sin cola). La idea es que tu nomina vuelva a correr sin sustos.\n\nMe avisas que dia te sirve?",
-      "tone_tags": ["empatico", "vos_colombia", "humano"],
-      "why_good": "Voz humana, reconoce el problema sin asumir, mandatory keywords (\"te escuchamos\", \"soporte enhanced\", \"sin sustos\") cubiertas, CTA suave, dentro de 120 palabras."
+      "id": "PIECE-006",
+      "source": "meta_ad_library",
+      "source_url": "https://www.facebook.com/ads/library/?id=1463289525498894",
+      "library_id": "1463289525498894",
+      "advertiser": "Loggro",
+      "platforms": ["facebook", "instagram"],
+      "format": "image",
+      "product_line": "Pymes",
+      "first_seen": "2026-04-02",
+      "still_active": true,
+      "multi_version": true,
+      "versions_count": 3,
+      "copy": {
+        "primary_text": "Menos Excel. Menos errores. Más control. 📊\n\nCon Loggro Pymes, tu software para negocio automatiza la contabilidad y la carga de facturas.\nTrabaja más inteligente, no más duro.\n\n👉 Conoce cómo funciona.",
+        "headline": "Automatiza tu contabilidad hoy",
+        "description": "Automatiza la carga de tus facturas contables",
+        "cta_button": "Get Quote"
+      },
+      "visual_description": "Imagen estatica 338x600 con UI de contabilidad automatizada y branding Pymes.",
+      "landing_destination": "https://promo.loggro.com/software-contable-pymes?utm_campaign=Pymes_032_Webinar_Leads_V5_similares_Advantage_Mix",
+      "brand_voice_compliance": {
+        "no_em_dashes": true,
+        "claims_with_substance": true,
+        "tone_matches_audience": true,
+        "format_respects_channel": true
+      },
+      "why_good": "Apertura con paralelismo memorable ('Menos Excel. Menos errores. Mas control.'), cierre con cliche traducido pero funcional ('mas inteligente, no mas duro'). Sin claims inflados.",
+      "screenshot_path": "data/track-c-pieces/screenshots/PIECE-006.jpg"
     },
     {
-      "id": "PIECE-G-007",
-      "brief_ref": "BRIEF-002",
-      "channel": "whatsapp",
-      "content": "Hola [Nombre]! Soy Andres del equipo Loggro.\n\nRapidito: ya tienes tus productos cargados en Loggro Pymes, y con Loggro POS los conectas al punto de venta sin recargar nada. Inventario en tiempo real, cierre de caja contabilizado, todo en el mismo sistema.\n\nQuieres que te muestre como se ve con tu cuenta? 20 min y te enviamos cotizacion el mismo dia.\n\nMe dices si te llamo hoy o manana.",
-      "tone_tags": ["vos_colombia", "casual", "directo"],
-      "why_good": "WhatsApp corto, vos Colombia natural, keywords cubiertas, CTA con opciones concretas de tiempo."
+      "id": "PIECE-007",
+      "source": "meta_ad_library",
+      "source_url": "https://www.facebook.com/ads/library/?id=1277770943887627",
+      "library_id": "1277770943887627",
+      "advertiser": "Loggro",
+      "platforms": ["facebook", "instagram"],
+      "format": "image",
+      "product_line": "Enterprise",
+      "first_seen": "2026-04-22",
+      "still_active": true,
+      "multi_version": true,
+      "versions_count": 1,
+      "copy": {
+        "primary_text": "¿Su empresa ya es demasiado complejo para su software actual? 🤯\n\nProcesos separados, errores y pérdida de control afectan su operación.\n\nCon Loggro Enterprise, centralice su negocio en un solo software ERP y tome decisiones en tiempo real 📊\n\n👉 Solicite una demo ahora",
+        "headline": "ERP para empresas +100 empleados",
+        "description": "Software ERP diseñado para operaciones complejas",
+        "cta_button": "Get Quote"
+      },
+      "visual_description": "Imagen estatica 400x600 con visual corporativo de Loggro Enterprise, segmentado a +100 empleados.",
+      "landing_destination": "https://promo.loggro.com/software-erp-en-la-nube-enterprise?utm_campaign=Enterprise006_Clientes_Advantage_Mix",
+      "brand_voice_compliance": {
+        "no_em_dashes": true,
+        "claims_with_substance": true,
+        "tone_matches_audience": true,
+        "format_respects_channel": true
+      },
+      "why_good": "Segmentacion explicita en headline (+100 empleados) que filtra audiencia. Tono formal con 'usted' para CFO/COO mid-market. Pain points concretos (procesos separados, errores). Nota: tiene error gramatical menor ('demasiado complejo' deberia ser 'demasiado compleja') pero es un anuncio real produccion.",
+      "screenshot_path": "data/track-c-pieces/screenshots/PIECE-007.jpg"
     },
     {
-      "id": "PIECE-G-008",
-      "brief_ref": "BRIEF-001",
-      "channel": "meta_ad",
-      "content": "HEADLINE: FE-DIAN sin salir de Loggro Pymes\n\nBODY: Activa el modulo de facturacion electronica certificado y cumple la resolucion 000165 antes del deadline.\n\nCTA: Agendar demo",
-      "tone_tags": ["profesional", "concreto", "urgencia_controlada"],
-      "why_good": "Headline 32 caracteres, body 107 caracteres, keyword DIAN, sin palabras prohibidas, sin claims de gratis o garantizado."
+      "id": "PIECE-008",
+      "source": "meta_ad_library",
+      "source_url": "https://www.facebook.com/ads/library/?id=1091027306404779",
+      "library_id": "1091027306404779",
+      "advertiser": "Loggro",
+      "platforms": ["facebook", "instagram"],
+      "format": "image",
+      "product_line": "Alojamientos",
+      "first_seen": "2026-04-10",
+      "still_active": true,
+      "multi_version": true,
+      "versions_count": 2,
+      "copy": {
+        "primary_text": "Desde posadas rurales hasta departamentos turísticos, Loggro Alojamientos se adapta a tu negocio para optimizar la ocupación y aumentar ingresos. 💰",
+        "headline": "Controla reservas sin enredos",
+        "description": "¡Solicita tu demo GRATIS!",
+        "cta_button": "Get Quote"
+      },
+      "visual_description": "Imagen horizontal 600x314 (formato feed FB) mostrando UI PMS y ambientacion turistica.",
+      "landing_destination": "https://promo.loggro.com/software-pms-alojamientos?utm_campaign=alojamientos013_hotelesymoteles_similares_advantage_mix",
+      "brand_voice_compliance": {
+        "no_em_dashes": true,
+        "claims_with_substance": true,
+        "tone_matches_audience": true,
+        "format_respects_channel": true
+      },
+      "why_good": "Rango explicito de mercado (posadas rurales hasta departamentos turisticos) que comunica flexibilidad. Headline corto y especifico. Vocabulario hotelero adecuado ('ocupacion', 'reservas').",
+      "screenshot_path": "data/track-c-pieces/screenshots/PIECE-008.jpg"
     },
     {
-      "id": "PIECE-G-009",
-      "brief_ref": "BRIEF-002",
-      "channel": "meta_ad",
-      "content": "HEADLINE: Tu Pymes ya conoce tus productos\n\nBODY: Conecta Loggro POS y vende desde caja con tu mismo catalogo. Inventario en tiempo real.\n\nCTA: Quiero ver demo",
-      "tone_tags": ["vos_colombia", "concreto", "cross_sell"],
-      "why_good": "Headline 33 caracteres, body 95 caracteres, mandatory keywords cubiertas, CTA accionable."
+      "id": "PIECE-009",
+      "source": "meta_ad_library",
+      "source_url": "https://www.facebook.com/ads/library/?id=941712055397574",
+      "library_id": "941712055397574",
+      "advertiser": "Loggro",
+      "platforms": ["facebook", "instagram"],
+      "format": "image",
+      "product_line": "Restobar",
+      "first_seen": "2026-05-11",
+      "still_active": true,
+      "multi_version": false,
+      "versions_count": 1,
+      "copy": {
+        "primary_text": "¿Todavía tomas pedidos en papel en horas pico? 📝\n\nCon Loggro Restobar los envías directo a cocina desde tu celular o tablet.\n\n👉 Evita errores y gana agilidad. Haz clic y pruébalo.",
+        "headline": "Envía pedidos directo a cocina 🍳",
+        "description": "Toma pedidos desde celular o tablet",
+        "cta_button": "Get quote"
+      },
+      "visual_description": "Imagen cuadrada 600x600 con mesero usando tablet, branding Loggro Restobar.",
+      "landing_destination": "https://promo.loggro.com/ (PROMO.LOGGRO.COM display URL en el ad)",
+      "brand_voice_compliance": {
+        "no_em_dashes": true,
+        "claims_with_substance": true,
+        "tone_matches_audience": true,
+        "format_respects_channel": true
+      },
+      "why_good": "Pieza mas reciente del set (May 11), hook con escenario operacional concreto (horas pico, papel), beneficio doble (evita errores + gana agilidad). Tono cercano apropiado para dueño de bar/restaurante.",
+      "screenshot_path": "data/track-c-pieces/screenshots/PIECE-009.jpg"
     },
     {
-      "id": "PIECE-G-010",
-      "brief_ref": "BRIEF-001",
-      "channel": "landing_hook",
-      "content": "VARIACION A (orientada al deadline):\nFactura electronica DIAN antes de noviembre, desde tu mismo Loggro Pymes.\n\nVARIACION B (orientada al beneficio operativo):\nCumple con la DIAN sin sumar un proveedor mas a tu stack contable.\n\nVARIACION C (orientada al equipo contable):\nTu contador ya conoce Loggro. Activa la facturacion electronica en el mismo sistema.",
-      "tone_tags": ["profesional", "concreto"],
-      "why_good": "Tres H1 distintos para A/B test, todos cubren keywords obligatorias, ninguno usa palabras prohibidas ni em-dashes, cada uno apela a un angulo diferente."
+      "id": "PIECE-010",
+      "source": "meta_ad_library",
+      "source_url": "https://www.facebook.com/ads/library/?id=739974378725532",
+      "library_id": "739974378725532",
+      "advertiser": "Loggro",
+      "platforms": ["facebook", "instagram"],
+      "format": "video",
+      "video_duration_seconds": 46,
+      "product_line": "Restobar+Pymes (cross-product)",
+      "first_seen": "2026-01-07",
+      "still_active": true,
+      "multi_version": false,
+      "versions_count": 1,
+      "copy": {
+        "primary_text": "🔗 ¡Gestiona tu restaurante y tus finanzas como un solo equipo!\n\nCon Loggro Restobar y Loggro Pymes todo se sincroniza: pedidos, facturas, inventario y contabilidad.\n\n📲 Haz clic y solicita tu cotización.",
+        "headline": "📲 Pedidos desde cualquier dispositivo",
+        "description": "¡Solicita tu demostración gratis!",
+        "cta_button": "Get quote"
+      },
+      "visual_description": "Video vertical 46s con UI de sincronizacion entre Restobar (cocina/caja) y Pymes (contabilidad/inventario).",
+      "landing_destination": "https://promo.loggro.com/ (PROMO.LOGGRO.COM display URL en el ad)",
+      "brand_voice_compliance": {
+        "no_em_dashes": true,
+        "claims_with_substance": true,
+        "tone_matches_audience": true,
+        "format_respects_channel": true
+      },
+      "why_good": "Pieza cross-product que muestra ecosistema integrado (Restobar + Pymes), beneficio concreto de sincronizacion (pedidos, facturas, inventario, contabilidad). Mas larga del set (46s) por la complejidad del mensaje cross-sell.",
+      "screenshot_path": "data/track-c-pieces/screenshots/PIECE-010.jpg"
     }
   ]
 }
