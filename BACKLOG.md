@@ -59,7 +59,7 @@ Los siguientes items quedaron OUT tras la decision de **eliminar el eval automat
 
 ## Plan de lanzamiento (orden sugerido)
 
-1. **Track C piezas** (3-4h): scrapear Meta Ad Library Loggro para good_pieces, LLM-gen bad_pieces, redactar 2 briefs faltantes
+1. ~~**Track C piezas** (3-4h): scrapear Meta Ad Library Loggro para good_pieces, LLM-gen bad_pieces, redactar 2 briefs faltantes~~ → ✅ **CERRADO** (commit b6eaa89): 10 good reales del Ad Library (Restobar/Pymes/POS/Enterprise/Alojamientos) + 10 bad sinteticas con `violations` estructurado (11 tipos cubiertos) + 3 briefs (FE-DIAN, POS cross-sell, Nomina retencion) + 10 screenshots
 2. **Track D audios** (2-3h): ElevenLabs Studio multi-speaker contra los 9 scripts ya escritos
 3. **AI_AUDIT_LOG_template examples** (30 min): 1 entrada buena + 1 mala al principio del template
 4. **AgentLint test contra CLAUDE.md vacio** (15 min): correr y ajustar el skeleton si da <30
