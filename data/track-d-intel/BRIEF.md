@@ -29,7 +29,7 @@ Es el track más multi-step y subjetivo. Multi-modal (audio → texto → estruc
 | [`speaker_map.json`](./speaker_map.json) | Metadata por audio (tipo + escenario + señales esperadas + challenges conocidos) |
 | [`schemas/insights_schema.json`](../../schemas/insights_schema.json) | Schema fijo del output que tu pipeline debe producir |
 | `docs/BRAND_VOICE.md` (del repo) | Brand voice guide de Loggro (para el follow-up email) |
-| Whisper self-hosted Loggro Labs | Acceso opcional gratuito (URL en `.env.example`) |
+| **Whisper self-hosted en `labs.loggro.com/whisper`** | Operativo. Modelo `small` faster-whisper. Auth en tu `.env`. Gratis. Ver [`README.md`](./README.md#stt--opciones-disponibles) |
 | Virtual key del LLM Broker | En tu `.env` |
 
 **Descarga los MP3** desde `labs.loggro.com` (ver [`README.md`](./README.md) → "Cómo descargar los audios" para los 3 métodos disponibles).

@@ -117,8 +117,40 @@ Variedad natural en la muestra. **No te decimos cuales son** porque eso es parte
 
 Si tu STT flaquea con alguno (paisa marcado, costeno rapido, etc.), documentalo en el AI Audit Log con un timestamp + por que.
 
-## Tip de costo
+## STT — Opciones disponibles
 
-80 min de audio. Con OpenAI Whisper API ($0.006/min): ~$0.48 USD por full pass. Con Deepgram Nova-2 espanol ($0.0043/min): ~$0.34 USD. Con Whisper self-hosted (acceso gratuito en Loggro Labs, URL en `.env.example`): $0. Procesar las 5 obligatorias cuesta ~$0.30 USD comercial / $0 self-hosted.
+| Opción | Costo (5 obligatorias) | Setup | Calidad ES Colombia |
+|---|---|---|---|
+| OpenAI Whisper API | ~$0.30 USD | API key | Alta |
+| Deepgram Nova-2 español | ~$0.22 USD | API key | Alta (modelo específico ES) |
+| AssemblyAI | ~$0.40 USD | API key | Alta |
+| **Whisper self-hosted Loggro Labs** | **$0** | URL + Basic Auth en `.env` | Media-Alta (modelo `small`, faster-whisper) |
 
-**Prompt caching** en la fase de LLM (extraccion de objeciones, scoring, follow-up email) bajaria 30-50% del costo de LLM agregado. Reportalo en tu README.
+### Cómo usar el Whisper de Loggro Labs
+
+Endpoint: `https://labs.loggro.com/whisper` (protegido con Basic Auth).
+
+**Tu correo de arranque incluye `WHISPER_USER` y `WHISPER_PASSWORD`.** Cargalos en `.env`.
+
+```bash
+# Transcripción de un audio (~2 min por minuto de audio en CPU)
+curl -X POST -u "$WHISPER_USER:$WHISPER_PASSWORD" \
+  -F "audio_file=@data/track-d-intel/audio/call-01-cancellation-explore-08m30.mp3" \
+  -F "output=json" \
+  -F "language=es" \
+  "$WHISPER_URL/asr"
+```
+
+Endpoints útiles:
+- `POST /asr` — transcripción (params: `audio_file`, `output`, `language`, `task=transcribe|translate`)
+- `POST /detect-language` — detecta idioma del audio
+- `GET /docs` — Swagger interactivo (con auth)
+
+**⚠️ Timeout del proxy público:** ~90 segundos. Para audios > 90s (la mayoría de los obligatorios), workarounds:
+- Usá `timeout=600` en tu HTTP client
+- Chunkeá audios largos con `ffmpeg` o `sox` (en chunks de ~5 min)
+- Para audios > 10 min, usá API comercial; es más rápido que pelear con timeouts
+
+### Prompt caching
+
+En la fase de LLM (extracción de objeciones, scoring, follow-up email) baja 30-50% del costo. Reportalo en tu README.
