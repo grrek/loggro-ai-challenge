@@ -14,16 +14,35 @@ Lo que falta para que el repo template este 100% listo. Auditado 2026-05-13.
 | C | `data/track-c-pieces/bad_pieces.json` | 1 entrada placeholder | 10 piezas que deberian rechazarse (con razon documentada) | **9 piezas más** |
 | D | `data/track-d-intel/*.mp3` | 0 archivos | 9 MP3 (3 obligatorios + 1 edge case + 5 opcionales) basados en los scripts en `docs/audio-scripts/` | **9 MP3s** |
 
-### Eval held-out
+### Eval held-out (lo más crítico del eval automatizado)
 
-| Archivo | Estado | Falta |
-|---------|--------|-------|
-| `eval/held_out/cases_a.json` | no existe | 5 casos secretos Track A (no se commitean al template publico, se cargan al evaluar) |
-| `eval/held_out/cases_b.json` | no existe | 5 casos secretos Track B |
-| `eval/held_out/cases_c.json` | no existe | 5 casos secretos Track C |
-| `eval/held_out/cases_d.json` | no existe | 5 casos secretos Track D |
+**Quién hace qué:**
+- El **candidato** implementa `run_track(track, cases)` en `eval/eval.py` que toma `cases` y los pasa por su pipeline. El skeleton ya está, él rellena la lógica.
+- **Loggro** mantiene 5 casos secretos por track (con groundtruth conocido), los carga al repo del candidato post-entrega, corre `make eval`, ve si pasa los thresholds.
 
-**Decision:** los held-out se mantienen privados. Generarlos antes de cada evaluacion, dropearlos al repo del candidato post-clone, correr `python eval/eval.py --track X --dataset eval/held_out/cases_X.json`, borrarlos.
+**Lo que necesitamos generar (NO va al repo público):**
+
+| Archivo (privado Loggro) | Estado | Schema esperado |
+|---|---|---|
+| `cases_a.json` (5 casos) | no existe | `[{"case_id": "a1", "account": {...cuenta a prospectar}, "ground_truth": {"intent": "interesado_negociar"\|"no_interesado"\|"requiere_info"\|...}}]` |
+| `cases_b.json` (5 casos) | no existe | `[{"case_id": "b1", "campaigns_subset": [...30 campañas con 1 anomalía], "ground_truth": {"anomaly_id": "CAMP-007", "anomaly_type": "audience_fatigue"}}]` |
+| `cases_c.json` (5 casos) | no existe | `[{"case_id": "c1", "brief": {...}, "channel": "instagram", "ground_truth": {"brand_voice_pass": true, "max_chars": 280, "must_include": [...], "must_exclude": [...]}}]` |
+| `cases_d.json` (5 casos) | no existe | `[{"case_id": "d1", "audio_file": "https://...", "transcript_expected": "...", "ground_truth": {"objections": [...], "competitors": [...], "risk_score_range": [0.4, 0.7]}}]` |
+
+**Falta también: documentar el schema en eval/README.md**
+- El candidato necesita saber QUÉ va a recibir en `cases` cuando Loggro corra el eval. Hoy `eval/README.md` solo dice "Loggro lo provee". Hay que detallar el schema por track (qué keys tiene cada case, qué groundtruth se espera) para que el candidato pueda implementar `run_track` sin adivinar.
+- Sugerido: agregar sección "Schema de cada case por track" con un ejemplo dummy (no real) por cada uno.
+
+**Decision sobre el flujo:**
+1. Loggro genera los 4 archivos privadamente (no commiteados, solo internos)
+2. Cuando el candidato entrega su repo, Loggro hace `cp cases_X.json candidato-repo/eval/held_out/cases.json`
+3. Corre `cd candidato-repo && python eval/eval.py --track X`
+4. Si pasa threshold → entrevista. Si no → conversación de revisión.
+
+**Decisión adicional necesaria:** ¿quién genera los cases?
+- Opción A: Edison + Grego diseñan a mano (4-6 horas)
+- Opción B: Generador con LLM + curación humana (2 horas con review)
+- Opción C: Reusar 5 cases del dataset público marcándolos como held-out internamente (más fácil pero menos AI-resistant)
 
 ## 🟡 Importantes (no bloquean pero mejoran señal)
 
