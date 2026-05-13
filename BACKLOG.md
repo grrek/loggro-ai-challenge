@@ -8,7 +8,7 @@ Lo que falta para que el repo template este 100% listo. Auditado 2026-05-13.
 
 | Track | Archivo | Estado | Meta | Falta |
 |-------|---------|--------|------|-------|
-| B | `data/track-b-insights/campaigns.json` | 2 entradas placeholder | 30 campañas reales con funnel completo, anomalias plantadas, lessons_learned en 5-7 de ellas | **28 campañas más** |
+| B | `data/track-b-insights/campaigns.json` | ✅ **CERRADO** | 124 campañas reales Q1-Q2 2026 (Google + Meta + LinkedIn sintética) con 3 anomalías plantadas + 2 engañosas | — |
 | C | `data/track-c-pieces/briefs.json` | 1 entrada placeholder | 3 briefs (DIAN, cross-sell POS, retencion Nomina) | **2 briefs más** |
 | C | `data/track-c-pieces/good_pieces.json` | 1 entrada placeholder | 10 piezas referencia que pasan brand voice | **9 piezas más** |
 | C | `data/track-c-pieces/bad_pieces.json` | 1 entrada placeholder | 10 piezas que deberian rechazarse (con razon documentada) | **9 piezas más** |
