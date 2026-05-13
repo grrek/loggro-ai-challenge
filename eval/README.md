@@ -6,8 +6,8 @@ Contrato de evaluacion automatica para tu entregable.
 
 | Archivo | Que es | Quien lo toca |
 |---|---|---|
-| `judge_prompt.md` | Prompt publico para LLM-as-judge. Rubrica de 5 dimensiones | Lo lees vos; lo extendes en Apendice.5 |
-| `eval.py` | Skeleton del eval harness. Implementa `run_track` | Lo completas vos |
+| `judge_prompt.md` | Prompt publico para LLM-as-judge. Rubrica de 5 dimensiones | Lo lees; lo extiendes en Apendice.5 |
+| `eval.py` | Skeleton del eval harness. Implementa `run_track` | Lo completas tú |
 | `held_out/` | Dataset secreto. Provisto por Loggro al evaluarte | NO commitees nada aca (esta en `.gitignore`) |
 
 ## Contrato de `eval.py`

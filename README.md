@@ -10,11 +10,11 @@ Si llegaste aca es porque pasaste el screening con Grego. Bienvenido. Antes de t
 
 | Que | Que es |
 |---|---|
-| Plazo | 48 horas desde que recibis el correo con tu virtual key |
+| Plazo | 48 horas desde que recibes el correo con tu virtual key |
 | Esfuerzo realista | 5 a 7 horas dentro de la ventana |
 | Tracks disponibles | A Outbound, B Insights, C Piezas, D Inteligencia de Conversaciones |
 | Tu entregable | repo publico propio + Loom 5 a 10 min + AI Audit Log + entrega del Apendice |
-| Costo tooling para vos | cero (Loggro provee virtual key del LLM Broker con budget cap) |
+| Costo tooling para ti | cero (Loggro provee virtual key del LLM Broker con budget cap) |
 
 ## Como arrancar
 
@@ -37,7 +37,7 @@ make eval
 # Leelo en legal/consentimiento_grabacion.md y firmalo digitalmente
 # (instrucciones adentro)
 
-# 6. Mandanos el link de tu repo nuevo por correo
+# 6. Mándanos el link de tu repo nuevo por correo
 # garistizabal@loggro.com -- arranca tu reloj de 48h cuando lo recibamos
 ```
 
@@ -46,7 +46,7 @@ make eval
 ```
 .
 |-- README.md                 esto
-|-- CLAUDE.md                 skeleton para tu manual de proyecto (lo llenas vos)
+|-- CLAUDE.md                 skeleton para tu manual de proyecto (lo llenas tú)
 |-- pyproject.toml            dependencias Python sugeridas (cambia si preferis Node)
 |-- Makefile                  comandos basicos
 |-- .env.example              virtual key del broker + base URL
@@ -59,7 +59,7 @@ make eval
 |   |-- hubspot_mock.json     contactos, deals, campanas, conversations
 |   `-- insights_schema.json  output esperado de Track D
 |-- eval/
-|   |-- judge_prompt.md       judge LLM v1.0 publico; vos lo extendes
+|   |-- judge_prompt.md       judge LLM v1.0 publico; lo extiendes en el Apendice.5
 |   |-- eval.py               skeleton; implementa run_track para tu track
 |   `-- held_out/             secreto; Loggro lo provee al evaluarte
 |-- docs/
@@ -100,7 +100,7 @@ Sin estos artefactos no se evalua tu entrega.
 
 ## Como pedir ayuda
 
-Durante tus 48h tenes 3 canales:
+Durante tus 48h tienes 3 canales:
 
 - **GitHub Issues** del repo (preferido para preguntas tecnicas reproducibles)
 - **Email** `garistizabal@loggro.com` (preferido para preguntas de criterio / scope)
@@ -111,7 +111,7 @@ Tiempo de respuesta target: <2h en horario laboral Colombia (9am a 7pm COT).
 ## Reglas duras
 
 - El AI Audit Log es obligatorio. Sin eso, no se evalua.
-- Cita supuestos. Si te inventas un dato, marcalo `[supuesto]` y deci por que.
+- Cita supuestos. Si te inventas un dato, marcalo `[supuesto]` y di por que.
 - Si te trabaste mas de lo razonable, escribilo. Eso suma, no resta.
 - Si usas un agente, no le permitas modificar el eval harness ni el dataset. Verificamos con `git diff` del repo.
 

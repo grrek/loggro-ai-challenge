@@ -11,7 +11,7 @@ La promesa: organizar y crecer. No revolucionar. No transformar. Organizar y cre
 ## Tono y voz
 
 - **Profesional pero cercano.** Tratamos a contadores, gerentes y CFOs como pares, no como audiencia objetivo. Lenguaje claro, sin condescendencia.
-- **Trato de "vos" Colombia en contextos comerciales y B2C.** "Vos podes facturar electronico desde el primer dia." Excepcion: contextos muy formales o cuando el cliente lleva la conversacion con "usted", ahi adaptamos.
+- **Trato cercano en contextos comerciales y B2C.** "Puedes facturar electrónico desde el primer día." Excepción: contextos muy formales o cuando el cliente lleva la conversación con "usted", ahí adaptamos.
 - **Datos cuando aplican.** Si afirmamos algo, lo respaldamos con un numero o un ejemplo concreto. "+15.000 clientes activos" suena mejor que "lider del mercado".
 - **Sin AI hype.** Loggro tiene IA (LIA) pero no la llamamos magia. La describimos: "atiende WhatsApp 24/7 con respuestas verificadas por tu equipo".
 
@@ -62,7 +62,7 @@ Reemplazos validos:
 
 > Tu Loggro Pymes ya viene con factura electronica DIAN integrada. Nada de plugins, nada de instalaciones aparte. Si vendes mas de 5 facturas al mes, ya estas obligado por la DIAN: te ayudamos a cumplir antes del 1ro de septiembre. Mas info en bio.
 
-Por que funciona: concreto, dato real, CTA claro, vos Colombia, sin claims inflados.
+Por que funciona: concreto, dato real, CTA claro, tono cercano, sin claims inflados.
 
 ### Email cold
 
@@ -104,7 +104,7 @@ Por que falla: tono robotico, "estimado cliente" sin personalizacion, palabras p
 | LinkedIn post | 150 a 400 palabras | Profesional con personalidad | Soft (link en bio, "te escucho en comments") |
 | Email outbound | 80 a 250 palabras | Directo, con contexto del prospecto | Reunion concreta (dia + hora propuesta) |
 | Email follow-up | 50 a 150 palabras | Mas casual, referencia conversacion previa | Pregunta abierta o reagenda |
-| WhatsApp | <120 palabras | Casual, vos | Una sola accion ("escribime", "agenda") |
+| WhatsApp | <120 palabras | Casual, cercano | Una sola accion ("escríbenos", "agenda") |
 | Meta ad headline | <40 caracteres | Beneficio concreto | Implicito en el body |
 | Meta ad body | <125 caracteres | Especifico, no generico | "Probar gratis 7 dias", "Hablar con asesor" |
 | Landing hook (H1) | <70 caracteres | Promesa clara | Implicito |
@@ -125,6 +125,6 @@ Para piezas visuales, ver `~/.claude/context/loggro/LOGGRO_BRAND/LOGGRO_BRAND.md
 
 Tipografias: Montserrat (titulos), Open Sans (cuerpo). Ambas en Google Fonts.
 
-## Si tenes duda
+## Si tienes duda
 
 Pregunta sencilla: "¿Esto suena a Loggro o suena a ChatGPT?". Si suena a ChatGPT, edita. Si la persona del otro lado podria leerlo en voz alta y sonarle natural, vas bien.

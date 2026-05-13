@@ -2,7 +2,7 @@
 
 > Este archivo es tu manual de proyecto. Lo lee tu agente (Claude Code, Cursor, Codex) y tambien lo lee el evaluador. Es **uno de los artefactos que medimos**.
 >
-> Lo llenas vos a medida que construis. No es un examen de teoria, es la documentacion que usarias en un proyecto real.
+> Lo llenas a medida que construyes. No es un examen de teoria, es la documentacion que usarias en un proyecto real.
 >
 > Al cierre, corremos AgentLint (https://www.agentlint.app/) sobre este archivo en vivo. Target: score >=70. Si va por debajo, conversamos.
 

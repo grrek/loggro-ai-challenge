@@ -1,6 +1,6 @@
 # docs/
 
-Templates y guias de referencia. Lo que vos generes durante el reto va en este mismo folder.
+Templates y guias de referencia. Lo que generes durante el reto va en este mismo folder.
 
 ## Templates obligatorios (los llenas)
 

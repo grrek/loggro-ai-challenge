@@ -14,11 +14,11 @@ Dos documentos. Leelos antes de arrancar tu cronometro de 48h.
 3. Guardalo como PDF o markdown firmado dentro de tu repo:
    - `legal/consentimiento_firmado.md` (o `.pdf`)
    - `legal/propiedad_intelectual_firmado.md` (o `.pdf`)
-4. Cuando confirmes el arranque por correo, mandanos el link al repo y damos por entendida la firma
+4. Cuando confirmes el arranque por correo, mándanos el link al repo y damos por entendida la firma
 
-## Si tenes dudas legales
+## Si tienes dudas legales
 
-Antes de firmar, podes mandar consultas a `proteccion.datos@loggro.com` o a `garistizabal@loggro.com`. Te respondemos.
+Antes de firmar, puedes mandar consultas a `proteccion.datos@loggro.com` o a `garistizabal@loggro.com`. Te respondemos.
 
 ## Politica oficial de privacidad
 

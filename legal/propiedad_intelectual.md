@@ -2,16 +2,16 @@
 
 ## TL;DR
 
-- Lo que **vos construis** durante el reto es **tuyo**.
+- Lo que **construyes** durante el reto es **tuyo**.
 - Loggro **no lo usa comercialmente** si no te contratamos.
-- Si te contratamos, lo que hiciste se vuelve la base de tu onboarding y podes seguir mejorandolo dentro de Loggro.
+- Si te contratamos, lo que hiciste se vuelve la base de tu onboarding y puedes seguir mejorandolo dentro de Loggro.
 - Si Loggro queda interesado en licenciar algo especifico aunque no te contrate, conversamos aparte con compensacion.
 
 ## Detalle
 
 ### 1. Propiedad del codigo del candidato
 
-Todo el codigo, documentacion, datasets propios, prompts, modelos finetuneados, configuraciones, ADRs y cualquier artefacto que vos generes durante las 48 horas del reto es **propiedad intelectual tuya**.
+Todo el codigo, documentacion, datasets propios, prompts, modelos finetuneados, configuraciones, ADRs y cualquier artefacto que generes durante las 48 horas del reto es **propiedad intelectual tuya**.
 
 Loggro no reclama ni copyright, ni patente, ni derechos de uso sobre tu entregable.
 
@@ -27,10 +27,10 @@ Si tras la evaluacion completa (Parte A + B + Apendice + Parte C) Loggro decide 
 
 ### 3. Que pasa si te contratamos
 
-Si Loggro te ofrece una posicion y vos aceptas:
+Si Loggro te ofrece una posicion y la aceptas:
 
-- **El entregable del reto se vuelve tu primer artefacto de onboarding**. Lo podes seguir construyendo y mejorando dentro de Loggro
-- Desde el momento que firmas tu contrato laboral con Loggro, lo que construis **en relacion laboral** (incluyendo evolucion del entregable del reto si seguis trabajando sobre el) se rige por la clausula estandar de propiedad intelectual de Loggro (el output de trabajo en relacion laboral pertenece a Loggro)
+- **El entregable del reto se vuelve tu primer artefacto de onboarding**. Puedes seguir construyendolo y mejorandolo dentro de Loggro
+- Desde el momento que firmas tu contrato laboral con Loggro, lo que construyes **en relacion laboral** (incluyendo evolucion del entregable del reto si sigues trabajando sobre el) se rige por la clausula estandar de propiedad intelectual de Loggro (el output de trabajo en relacion laboral pertenece a Loggro)
 - Pero la **version inicial entregada en las 48 horas del reto** sigue siendo tuya y podes hacer fork / mantener tu propia version personal de la base original
 
 ### 4. Que pasa si no contratamos pero queremos licenciar algo especifico
@@ -39,7 +39,7 @@ Si despues del reto Loggro identifica que un componente especifico de tu entrega
 
 ### 5. Codigo de terceros y open source
 
-Si vos usas codigo open source en tu entregable, ese codigo mantiene su licencia original. Es tu responsabilidad cumplir con esas licencias (atribucion, compatibilidad, copyleft, lo que aplique). Loggro asume que vos hiciste tu due diligence ahi.
+Si usas codigo open source en tu entregable, ese codigo mantiene su licencia original. Es tu responsabilidad cumplir con esas licencias (atribucion, compatibilidad, copyleft, lo que aplique). Loggro asume que hiciste tu due diligence ahi.
 
 ### 6. Datasets del template
 

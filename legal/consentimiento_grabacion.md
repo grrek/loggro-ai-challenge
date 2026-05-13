@@ -35,18 +35,18 @@ La grabacion **no se compartira fuera del equipo evaluador interno de Loggro** s
 
 ## 5. Tus derechos (ARCO)
 
-Conforme a la Ley 1581/2012, en cualquier momento podes:
+Conforme a la Ley 1581/2012, en cualquier momento puedes:
 
 - **Acceder** a tus datos personales en posesion de Loggro
 - **Rectificar** datos incorrectos o desactualizados
 - **Cancelar** (suprimir) tus datos personales
 - **Oponerte** al tratamiento para usos especificos
 
-Para ejercer cualquiera de estos derechos, escribi a `proteccion.datos@loggro.com` con tu nombre, identificacion y solicitud explicita. Tiempo maximo de respuesta: 10 dias habiles (consulta) o 15 dias habiles (reclamo), segun lo establecido por la Ley.
+Para ejercer cualquiera de estos derechos, escribe a `proteccion.datos@loggro.com` con tu nombre, identificacion y solicitud explicita. Tiempo maximo de respuesta: 10 dias habiles (consulta) o 15 dias habiles (reclamo), segun lo establecido por la Ley.
 
 ## 6. Revocacion del consentimiento
 
-Podes revocar este consentimiento en cualquier momento, incluso durante la grabacion (verbalmente, queda registrado en el mismo audio). La revocacion posterior a la sesion se hace por correo a `proteccion.datos@loggro.com`. Si la revocas, Loggro elimina la grabacion dentro de los 5 dias habiles siguientes.
+Puedes revocar este consentimiento en cualquier momento, incluso durante la grabacion (verbalmente, queda registrado en el mismo audio). La revocacion posterior a la sesion se hace por correo a `proteccion.datos@loggro.com`. Si la revocas, Loggro elimina la grabacion dentro de los 5 dias habiles siguientes.
 
 Si decides no autorizar la grabacion, la Parte C se realiza igual y se evalua con las notas escritas en vivo de Grego y Edison. No hay penalizacion en la nota por no autorizar.
 
