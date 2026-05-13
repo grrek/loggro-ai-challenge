@@ -1,6 +1,6 @@
-# Track A — Prospección Automatizada (Outbound)
+# Escenario A — Prospección Automatizada (Outbound)
 
-> Brief técnico del Track A del reto VE-1770. Léelo después de decidir que A es tu track.
+> Brief técnico del Escenario A del reto VE-1770. Léelo después de decidir que A es tu track.
 
 ## Brief
 

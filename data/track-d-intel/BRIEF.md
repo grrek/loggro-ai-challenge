@@ -1,6 +1,6 @@
-# Track D — Inteligencia de Conversaciones Comerciales
+# Escenario D — Inteligencia de Conversaciones Comerciales
 
-> Brief técnico del Track D del reto VE-1770. Léelo después de decidir que D es tu track.
+> Brief técnico del Escenario D del reto VE-1770. Léelo después de decidir que D es tu track.
 
 ## Brief
 

@@ -57,7 +57,7 @@ cat eval/judge_prompt.md
 |   `-- track-d-intel/        9 MP3 (3 obligatorios + 1 edge case + 5 opcionales)
 |-- schemas/
 |   |-- hubspot_mock.json     contactos, deals, campanas, conversations
-|   `-- insights_schema.json  output esperado de Track D
+|   `-- insights_schema.json  output esperado de Escenario D
 |-- eval/
 |   |-- judge_prompt.md       judge LLM v1.0 publico; lo extiendes en el Apendice.A5
 |   `-- README.md             como te evaluamos

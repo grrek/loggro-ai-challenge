@@ -1,4 +1,4 @@
-# Track C — Generador de Piezas de Marketing (dataset hibrido real + sintetico)
+# Escenario C — Generador de Piezas de Marketing (dataset hibrido real + sintetico)
 
 Dataset golden para el reto tecnico VE-1770 (Analista de Automatizacion y RevOps). Sirve como base para que el candidato construya un agente generador de copy con un reviewer que bloquee piezas fuera de brand voice.
 

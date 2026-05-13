@@ -1,4 +1,4 @@
-# Track A - ICP (Ideal Customer Profile)
+# Escenario A - ICP (Ideal Customer Profile)
 
 Esto es tu input principal. Tu pipeline tiene que **generar ~100 cuentas nuevas** que matcheen este ICP usando las fuentes y herramientas que prefieras.
 

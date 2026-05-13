@@ -1,6 +1,6 @@
-# Track B — Insights de Campañas de Marketing
+# Escenario B — Insights de Campañas de Marketing
 
-> Brief técnico del Track B del reto VE-1770. Léelo después de decidir que B es tu track.
+> Brief técnico del Escenario B del reto VE-1770. Léelo después de decidir que B es tu track.
 
 ## Brief
 

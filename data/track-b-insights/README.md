@@ -1,4 +1,4 @@
-# Track B - Marketing Insights Dataset
+# Escenario B - Marketing Insights Dataset
 
 Dataset real (Q1-Q2 2026) anonimizado de las campañas activas y pausadas de Loggro. El candidato construye un sistema que analiza este snapshot y produce **3 insights priorizados con acción concreta y detección de anomalías**.
 
@@ -111,10 +111,6 @@ Tu sistema debe producir un JSON con la forma:
   ]
 }
 ```
-
-## Held-out evaluation
-
-Loggro mantiene **5 casos held-out privados** que NO están en este repo (`cases_b.json` privado). Cada caso es un subconjunto de ~30 campañas con anomalía conocida. Tu pipeline corre contra ellos vía `eval/eval.py --track b`. Threshold para avanzar: **3/5 pasan + reasoning_quality >= 0.7**.
 
 ## Consideraciones para el analista
 

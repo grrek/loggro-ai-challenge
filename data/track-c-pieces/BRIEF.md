@@ -1,6 +1,6 @@
-# Track C — Generador de Piezas de Marketing
+# Escenario C — Generador de Piezas de Marketing
 
-> Brief técnico del Track C del reto VE-1770. Léelo después de decidir que C es tu track.
+> Brief técnico del Escenario C del reto VE-1770. Léelo después de decidir que C es tu track.
 
 ## Brief
 

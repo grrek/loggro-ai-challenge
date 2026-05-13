@@ -1,4 +1,4 @@
-# Track A — Outbound Automation (Reto VE-1770)
+# Escenario A — Outbound Automation (Reto VE-1770)
 
 Construyes un sistema de outbound end-to-end: **identificación de cuentas, enrichment, secuencia email + WhatsApp, clasificación de respuestas**.
 
@@ -63,7 +63,7 @@ Distribución:
 
 ## Cómo se evalúa este track
 
-Ver [`eval/judge_prompt.md`](../../eval/judge_prompt.md) para la rúbrica de 5 dimensiones. Lo más específico de Track A:
+Ver [`eval/judge_prompt.md`](../../eval/judge_prompt.md) para la rúbrica de 5 dimensiones. Lo más específico de Escenario A:
 
 - **Calidad del ICP match**: % de tus 100 cuentas que realmente cumplen el ICP
 - **Diversidad sectorial**: balance entre sectores listados
