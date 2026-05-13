@@ -1,0 +1,167 @@
+{
+  "demo_A_contadora.mp3": {
+    "scene": "Demo modulo Facturacion Electronica DIAN a contadora pyme",
+    "location": "Bogota",
+    "speaker_0": {
+      "role": "vendedor_loggro",
+      "name": "Andres",
+      "voice_gender": "masculino",
+      "accent": "paisa_medellin"
+    },
+    "speaker_1": {
+      "role": "contadora_pyme",
+      "name": "Marcela",
+      "voice_gender": "femenino",
+      "accent": "bogotano",
+      "company_size_employees": 80,
+      "sector": "manufactura"
+    }
+  },
+  "demo_B_cfo.mp3": {
+    "scene": "Demo Loggro Enterprise a CFO mid-market multi-compania",
+    "location": "Cali",
+    "speaker_0": {
+      "role": "vendedor_loggro",
+      "name": "Andres",
+      "voice_gender": "masculino",
+      "accent": "paisa_medellin"
+    },
+    "speaker_1": {
+      "role": "cfo_midmarket",
+      "name": "Carlos",
+      "voice_gender": "masculino",
+      "accent": "valluno_cali",
+      "company_size_employees": 350,
+      "sector": "manufactura_distribucion"
+    }
+  },
+  "demo_C_negociacion.mp3": {
+    "scene": "Negociacion precio vs Siigo y World Office, retail mid-market",
+    "location": "Medellin",
+    "speaker_0": {
+      "role": "vendedor_loggro",
+      "name": "Andres",
+      "voice_gender": "masculino",
+      "accent": "paisa_medellin"
+    },
+    "speaker_1": {
+      "role": "gerente_general",
+      "name": "Patricia",
+      "voice_gender": "femenino",
+      "accent": "paisa_medellin",
+      "company_size_employees": 120,
+      "sector": "retail"
+    }
+  },
+  "edge_case_consent_denied.mp3": {
+    "scene": "Cliente niega consentimiento de grabacion en segundo 0:30",
+    "location": "no_especificado",
+    "speaker_0": {
+      "role": "vendedor_loggro",
+      "name": "Andres",
+      "voice_gender": "masculino",
+      "accent": "paisa_medellin"
+    },
+    "speaker_1": {
+      "role": "cliente_potencial",
+      "name": "Marcos",
+      "voice_gender": "masculino",
+      "accent": "neutro_colombiano",
+      "anonymized": true
+    },
+    "metadata": {
+      "consent_denial_at_seconds": 30,
+      "expected_pipeline_behavior": "marcar consent_denied=true; no procesar contenido posterior a denegacion para insights"
+    }
+  },
+  "optional_followup_won.mp3": {
+    "scene": "Follow-up con cliente cerrado hace 3 meses, oportunidad cross-sell POS",
+    "location": "Pereira",
+    "speaker_0": {
+      "role": "vendedor_loggro",
+      "name": "Andres",
+      "voice_gender": "masculino",
+      "accent": "paisa_medellin"
+    },
+    "speaker_1": {
+      "role": "gerente_administrativa",
+      "name": "Liliana",
+      "voice_gender": "femenino",
+      "accent": "paisa_pereira",
+      "company_size_employees": 60,
+      "sector": "distribucion_alimentos"
+    }
+  },
+  "optional_hospitalidad.mp3": {
+    "scene": "Demo Loggro Alojamientos hotel boutique pre-temporada",
+    "location": "Cartagena",
+    "speaker_0": {
+      "role": "vendedor_loggro",
+      "name": "Andres",
+      "voice_gender": "masculino",
+      "accent": "paisa_medellin"
+    },
+    "speaker_1": {
+      "role": "gerente_hotel",
+      "name": "Diego",
+      "voice_gender": "masculino",
+      "accent": "costeno_cartagena",
+      "company_size_employees": 18,
+      "sector": "hoteleria_boutique"
+    }
+  },
+  "optional_nomina.mp3": {
+    "scene": "Demo Loggro Nomina a RRHH manufactura, novedades masivas",
+    "location": "Barranquilla",
+    "speaker_0": {
+      "role": "vendedor_loggro",
+      "name": "Andres",
+      "voice_gender": "masculino",
+      "accent": "paisa_medellin"
+    },
+    "speaker_1": {
+      "role": "lider_rrhh",
+      "name": "Tatiana",
+      "voice_gender": "femenino",
+      "accent": "costeno_barranquilla",
+      "company_size_employees": 200,
+      "sector": "manufactura"
+    }
+  },
+  "optional_deal_estancado.mp3": {
+    "scene": "Tercera llamada con prospecto que dilata, BANT fallando en Authority",
+    "location": "Bucaramanga",
+    "speaker_0": {
+      "role": "vendedor_loggro",
+      "name": "Andres",
+      "voice_gender": "masculino",
+      "accent": "paisa_medellin"
+    },
+    "speaker_1": {
+      "role": "director_administrativo",
+      "name": "Mauricio",
+      "voice_gender": "masculino",
+      "accent": "santandereano",
+      "company_size_employees": 90,
+      "sector": "servicios_profesionales"
+    }
+  },
+  "optional_referido.mp3": {
+    "scene": "Lead caliente por referido, calificacion MEDDPICC light",
+    "location": "Manizales",
+    "speaker_0": {
+      "role": "vendedor_loggro",
+      "name": "Andres",
+      "voice_gender": "masculino",
+      "accent": "paisa_medellin"
+    },
+    "speaker_1": {
+      "role": "gerente_operaciones",
+      "name": "Sandra",
+      "voice_gender": "femenino",
+      "accent": "paisa_manizales",
+      "company_size_employees": 70,
+      "sector": "manufactura"
+    }
+  }
+}

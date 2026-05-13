@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "id": "PIECE-G-001",
+      "brief_ref": "BRIEF-001",
+      "channel": "linkedin_post",
+      "content": "El deadline de la DIAN no se mueve. Tu operacion contable, si.\n\nDesde noviembre 2026 todas las pymes que facturen mas de 3.500 UVT al ano deben emitir factura electronica bajo la resolucion 000165. Si todavia estas resolviendo esto por fuera de tu ERP, te toca elegir: parchar con un tercero o cerrarlo dentro del mismo sistema donde ya manejas tu contabilidad.\n\nEn Loggro Pymes ya hay mas de 4.200 empresas colombianas emitiendo facturacion electronica directo desde el modulo nativo, sin doble digitacion y con la trazabilidad que pide la DIAN.\n\nQue cambia para tu equipo de contabilidad:\n- La factura sale ya validada contra la DIAN, no hay reproceso.\n- El asiento contable queda armado en el mismo flujo.\n- Tu contador externo entra a la misma vista que tu, sin exportar archivos planos.\n\nNo es magia, es integracion: el modulo lleva tres anos certificado por la DIAN y lo soporta el mismo equipo que ya conoces.\n\nSi quieres revisar como se ve en tu caso, agenda 20 minutos con el equipo en el enlace del primer comentario.",
+      "tone_tags": ["profesional", "con_dato", "urgencia_controlada"],
+      "why_good": "Concreto (numero de UVT, resolucion 000165, 4.200 empresas), CTA claro, sin claims inflados, sin palabras prohibidas, sin em-dashes."
+    },
+    {
+      "id": "PIECE-G-002",
+      "brief_ref": "BRIEF-002",
+      "channel": "linkedin_post",
+      "content": "Un cliente de retail nos escribio el lunes: \"llevo tres anos con Loggro Pymes y nunca prendi el POS porque pense que era empezar de cero\".\n\nLo prendimos el martes. El miercoles ya estaba vendiendo desde caja con el mismo catalogo que ya tenia cargado en Pymes.\n\nEso es lo que mas nos cuesta explicar de Loggro POS: tu Loggro Pymes ya conoce tus productos. No vas a recargar inventario, no vas a recrear codigos, no vas a re-entrenar al cajero en una herramienta nueva. El POS se monta encima de lo que ya tienes y sincroniza el inventario en tiempo real.\n\nQue ganas concretamente:\n- Punto de venta conectado a tu contabilidad sin importar archivos.\n- Inventario que baja al instante con cada venta.\n- Cierre de caja que ya queda contabilizado.\n\nEl tiempo real de implementacion depende de cuantas tiendas y referencias manejes*, pero la mayoria de clientes Pymes lo tienen operando en menos de una semana.\n\nSi te interesa verlo con tus propios datos, comentame \"POS\" y te conecto con el equipo.\n\n*Tiempos sujetos a complejidad del catalogo y numero de puntos de venta.",
+      "tone_tags": ["vos_colombia", "storytelling", "cercano"],
+      "why_good": "Storytelling real, vos Colombia, claim de tiempo con asterisco como pide el brief, mandatory keywords cubiertas, CTA suave por comentario."
+    },
+    {
+      "id": "PIECE-G-003",
+      "brief_ref": null,
+      "channel": "linkedin_post",
+      "content": "Dato que nos sorprendio revisando la base de clientes este trimestre:\n\nEl 38% de las pymes colombianas que usan un ERP todavia hace su nomina en una hoja de calculo aparte.\n\nNo es porque no sepan que existe el modulo de nomina, es porque migrar les da miedo: temen perder historico, romper la conexion con el contador o que el equipo no se adapte.\n\nLas que finalmente migran a Loggro Nomina suelen reportar tres cosas despues de los primeros tres meses:\n1. Cierran la nomina en la mitad del tiempo (de 3 dias a 1.5 en promedio en nuestra base).\n2. Dejan de pagar recargos a la DIAN por correcciones tardias.\n3. El contador agradece, porque el archivo plano sale ya armado.\n\nSi estas en ese 38%, no estas atrasado, estas en buena compania. Pero el costo de seguir asi es mas alto del que parece.\n\nQue herramienta usas hoy para liquidar nomina? Te leo en comentarios.",
+      "tone_tags": ["profesional", "con_dato", "engagement_post"],
+      "why_good": "Abre con dato concreto, plantea problema real, CTA conversacional, sin claims inflados, sin em-dashes ni palabras prohibidas."
+    },
+    {
+      "id": "PIECE-G-004",
+      "brief_ref": "BRIEF-001",
+      "channel": "email_outbound",
+      "content": "Asunto: Tu modulo FE-DIAN, antes de noviembre\n\nHola [Nombre],\n\nTe escribo porque tu cuenta de Loggro Pymes todavia no tiene activado el modulo de facturacion electronica DIAN, y el deadline de la resolucion 000165 se cumple en noviembre 2026.\n\nEl modulo ya esta certificado, ya esta incluido en tu plan actual y se activa desde tu mismo entorno (no es una herramienta nueva, no es un proveedor externo). El equipo de implementacion te acompana en la configuracion del rango de numeracion DIAN y en la primera emision.\n\nQue necesitamos de tu lado:\n- 30 minutos con la persona que maneja la facturacion.\n- Tu resolucion de numeracion DIAN vigente.\n- Acceso al RUT de la empresa.\n\nSi te queda mas facil, agenda directo en mi calendario: [link]\n\nO respondeme con dos o tres horarios y lo cuadramos.\n\nGracias,\n[Nombre AE]\nLoggro\n\nP.D. Si ya estas trabajando con otro proveedor de FE, igual conversemos. El cumplimiento DIAN aplica sin importar quien emita, pero te puede convenir tener todo en un mismo sistema.",
+      "tone_tags": ["profesional", "outbound_personalizado", "concreto"],
+      "why_good": "Asunto especifico, propuesta clara, lista lo que necesita, doble CTA (calendario o respuesta), cierra con razon para conversar incluso si ya tiene proveedor."
+    },
+    {
+      "id": "PIECE-G-005",
+      "brief_ref": "BRIEF-002",
+      "channel": "email_outbound",
+      "content": "Asunto: Vi que abriste el correo del POS, te ayudo a aterrizarlo\n\nHola [Nombre],\n\nVi que la semana pasada abriste el correo sobre Loggro POS pero no agendaste. No te voy a perseguir, solo te dejo el contexto por si te sirve decidir.\n\nTu cuenta de Loggro Pymes ya tiene cargados los [numero] productos que manejas. Si conectamos el POS, esos productos pasan automaticamente al punto de venta y el inventario empieza a bajar en tiempo real con cada factura POS que emitas.\n\nLo que mas escucho de clientes retail despues de prenderlo:\n- Se acaba la pelea de \"cuantas unidades hay realmente\".\n- El cierre de caja del dia ya queda contabilizado.\n- El cajero usa la misma interfaz independiente del local.\n\nNo necesitas migrar nada, no necesitas reentrenar a tu equipo en otra herramienta*.\n\nSi quieres una demo de 25 minutos con tus propios productos cargados, respondeme con el dia que te queda mejor esta semana.\n\nGracias,\n[Nombre AE]\n\n*Implementacion estandar entre 3 y 7 dias habiles segun complejidad del catalogo.",
+      "tone_tags": ["follow_up", "vos_colombia", "personalizado"],
+      "why_good": "Follow-up basado en comportamiento real (apertura previa), keywords obligatorias cubiertas, asterisco en claim de tiempo, CTA especifico."
+    },
+    {
+      "id": "PIECE-G-006",
+      "brief_ref": "BRIEF-003",
+      "channel": "whatsapp",
+      "content": "Hola [Nombre], soy [Nombre CSM] del equipo de Loggro Nomina.\n\nVi que en el ultimo trimestre tu equipo abrio varios casos con soporte. Antes de que decidas nada, queria preguntarte directamente: que es lo que mas te esta costando con la nomina ahora mismo?\n\nTe escribimos porque te escuchamos, no porque toque el ciclo de renovacion.\n\nSi te queda 15 minutos esta semana, te quiero mostrar nuestro plan de soporte enhanced (canal directo con un especialista asignado, sin cola). La idea es que tu nomina vuelva a correr sin sustos.\n\nMe avisas que dia te sirve?",
+      "tone_tags": ["empatico", "vos_colombia", "humano"],
+      "why_good": "Voz humana, reconoce el problema sin asumir, mandatory keywords (\"te escuchamos\", \"soporte enhanced\", \"sin sustos\") cubiertas, CTA suave, dentro de 120 palabras."
+    },
+    {
+      "id": "PIECE-G-007",
+      "brief_ref": "BRIEF-002",
+      "channel": "whatsapp",
+      "content": "Hola [Nombre]! Soy Andres del equipo Loggro.\n\nRapidito: ya tienes tus productos cargados en Loggro Pymes, y con Loggro POS los conectas al punto de venta sin recargar nada. Inventario en tiempo real, cierre de caja contabilizado, todo en el mismo sistema.\n\nQuieres que te muestre como se ve con tu cuenta? 20 min y te enviamos cotizacion el mismo dia.\n\nMe dices si te llamo hoy o manana.",
+      "tone_tags": ["vos_colombia", "casual", "directo"],
+      "why_good": "WhatsApp corto, vos Colombia natural, keywords cubiertas, CTA con opciones concretas de tiempo."
+    },
+    {
+      "id": "PIECE-G-008",
+      "brief_ref": "BRIEF-001",
+      "channel": "meta_ad",
+      "content": "HEADLINE: FE-DIAN sin salir de Loggro Pymes\n\nBODY: Activa el modulo de facturacion electronica certificado y cumple la resolucion 000165 antes del deadline.\n\nCTA: Agendar demo",
+      "tone_tags": ["profesional", "concreto", "urgencia_controlada"],
+      "why_good": "Headline 32 caracteres, body 107 caracteres, keyword DIAN, sin palabras prohibidas, sin claims de gratis o garantizado."
+    },
+    {
+      "id": "PIECE-G-009",
+      "brief_ref": "BRIEF-002",
+      "channel": "meta_ad",
+      "content": "HEADLINE: Tu Pymes ya conoce tus productos\n\nBODY: Conecta Loggro POS y vende desde caja con tu mismo catalogo. Inventario en tiempo real.\n\nCTA: Quiero ver demo",
+      "tone_tags": ["vos_colombia", "concreto", "cross_sell"],
+      "why_good": "Headline 33 caracteres, body 95 caracteres, mandatory keywords cubiertas, CTA accionable."
+    },
+    {
+      "id": "PIECE-G-010",
+      "brief_ref": "BRIEF-001",
+      "channel": "landing_hook",
+      "content": "VARIACION A (orientada al deadline):\nFactura electronica DIAN antes de noviembre, desde tu mismo Loggro Pymes.\n\nVARIACION B (orientada al beneficio operativo):\nCumple con la DIAN sin sumar un proveedor mas a tu stack contable.\n\nVARIACION C (orientada al equipo contable):\nTu contador ya conoce Loggro. Activa la facturacion electronica en el mismo sistema.",
+      "tone_tags": ["profesional", "concreto"],
+      "why_good": "Tres H1 distintos para A/B test, todos cubren keywords obligatorias, ninguno usa palabras prohibidas ni em-dashes, cada uno apela a un angulo diferente."
+    }
+  ]
+}

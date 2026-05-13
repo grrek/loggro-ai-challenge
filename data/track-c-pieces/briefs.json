@@ -1,0 +1,59 @@
+{
+  "briefs": [
+    {
+      "id": "BRIEF-001",
+      "name": "Lanzamiento modulo Facturacion Electronica DIAN para Pymes",
+      "product": "Modulo Facturacion Electronica DIAN integrado a Loggro Pymes",
+      "audience": "Contadores y administradores de pymes colombianas de 20 a 100 empleados que ya usan Loggro Pymes y aun no tienen el modulo de facturacion electronica activo.",
+      "objective": "Activar el modulo FE-DIAN en la base instalada antes del deadline DIAN y captar leads MQL de pymes que aun no son clientes.",
+      "kpi": "leads MQL >150 en 30 dias",
+      "start_date": "2026-06-01",
+      "budget_cop": 12000000,
+      "tone": "profesional informativo, con urgencia controlada por el deadline DIAN, sin alarmismo.",
+      "mandatory_keywords": ["DIAN", "facturacion electronica", "cumplimiento"],
+      "forbidden_keywords": ["gratis", "ilimitado", "garantizado 100%"],
+      "legal_constraints": [
+        "cumplimiento DIAN vigente segun resolucion 000165 de 2023",
+        "no prometer 100% sin errores en la emision",
+        "no ofrecer descuentos sobre la facturacion electronica en publicidad pagada (politica DIAN)"
+      ],
+      "deliverables_expected": ["linkedin_post", "email_outbound", "meta_ad", "landing_hook"]
+    },
+    {
+      "id": "BRIEF-002",
+      "name": "Cross-sell Loggro POS a clientes existentes de Loggro Pymes (retail)",
+      "product": "Loggro POS conectado a la cuenta existente de Loggro Pymes",
+      "audience": "Gerentes y duenos de retail que ya son clientes de Loggro Pymes y operan al menos una tienda fisica en Colombia.",
+      "objective": "Activar oportunidades comerciales de cross-sell hacia Loggro POS mostrando que la base de productos ya existe en Loggro Pymes.",
+      "kpi": "opportunities >30 en 45 dias",
+      "start_date": "2026-06-15",
+      "budget_cop": 8000000,
+      "tone": "cercano, con vos Colombia, apoyado en casos reales de clientes.",
+      "mandatory_keywords": ["punto de venta", "inventario en tiempo real", "tu Loggro Pymes ya conoce tus productos"],
+      "forbidden_keywords": ["instalacion en 5 minutos", "sin curva de aprendizaje"],
+      "legal_constraints": [
+        "cualquier claim de tiempo de implementacion debe ir con asterisco y nota al pie",
+        "no afirmar que el POS reemplaza la asesoria contable"
+      ],
+      "deliverables_expected": ["linkedin_post", "email_outbound", "whatsapp", "meta_ad"]
+    },
+    {
+      "id": "BRIEF-003",
+      "name": "Retencion de clientes Loggro Nomina con alto riesgo de churn",
+      "product": "Loggro Nomina + plan de soporte enhanced",
+      "audience": "Clientes activos de Loggro Nomina que abrieron mas de 5 tickets de soporte en el ultimo trimestre y muestran senales de churn.",
+      "objective": "Reducir el churn de esta cohorte ofreciendo soporte enhanced (no descuento de licencia) y reconstruyendo confianza.",
+      "kpi": "churn -30% en cohorte vs trimestre anterior",
+      "start_date": "2026-06-20",
+      "budget_cop": 4000000,
+      "tone": "empatico, problema-solucion, humano, sin sonar a disculpa corporativa.",
+      "mandatory_keywords": ["te escuchamos", "soporte enhanced", "tu nomina, sin sustos"],
+      "forbidden_keywords": ["nos disculpamos por los inconvenientes", "compensacion"],
+      "legal_constraints": [
+        "no mencionar problemas especificos de cuentas individuales en piezas masivas",
+        "no ofrecer compensacion economica explicita (riesgo contable y de equidad entre clientes)"
+      ],
+      "deliverables_expected": ["email_outbound", "whatsapp", "linkedin_post"]
+    }
+  ]
+}

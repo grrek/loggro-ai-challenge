@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://labs.loggro.com/schemas/insights_schema.json",
+  "title": "Call Insights (Track D output)",
+  "description": "Schema del archivo insights.json que tu pipeline produce por cada llamada del Track D. Tu eval verifica conformidad con este schema.",
+  "type": "object",
+  "required": [
+    "call_id",
+    "summary",
+    "objections",
+    "competitors_mentioned",
+    "compliance_signals",
+    "next_steps",
+    "risk_score",
+    "follow_up_email"
+  ],
+  "properties": {
+    "call_id": {
+      "type": "string",
+      "description": "Identificador unico de la llamada, normalmente nombre del archivo MP3 sin extension"
+    },
+    "duration_seconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "talk_ratio": {
+      "type": "object",
+      "description": "Proporcion de tiempo hablado por cada parte (0-1)",
+      "properties": {
+        "vendor": {"type": "number", "minimum": 0, "maximum": 1},
+        "client": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 500,
+      "description": "Resumen ejecutivo de la llamada en espanol Colombia, sin em-dashes"
+    },
+    "consent_denied": {
+      "type": "boolean",
+      "default": false,
+      "description": "True si el cliente nego consentimiento de grabacion durante la llamada"
+    },
+    "objections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "quote", "confidence"],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": ["precio", "timing", "autoridad", "fit_tecnico", "competidor", "compliance"]
+          },
+          "quote": {
+            "type": "string",
+            "description": "Cita textual aproximada de la objecion en el audio"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "timestamp_seconds": {
+            "type": ["number", "null"]
+          }
+        }
+      }
+    },
+    "competitors_mentioned": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "context", "sentiment"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "enum": ["Siigo", "World Office", "Alegra", "ContaPyme", "Helisa", "SAP Business One", "NetSuite", "Otro"]
+          },
+          "context": {
+            "type": "string",
+            "description": "Que dijo el cliente sobre el competidor (1-2 oraciones)"
+          },
+          "sentiment": {
+            "type": "string",
+            "enum": ["positivo", "neutral", "negativo"]
+          }
+        }
+      }
+    },
+    "compliance_signals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["signal", "context"],
+        "properties": {
+          "signal": {
+            "type": "string",
+            "enum": [
+              "DIAN",
+              "factura_electronica",
+              "NIIF_pyme",
+              "NIIF_plena",
+              "retencion_fuente",
+              "RUT",
+              "regimen_tributario",
+              "multi_compania",
+              "multi_moneda",
+              "nomina_electronica",
+              "UVT",
+              "prestaciones_sociales"
+            ]
+          },
+          "context": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "next_steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["who", "what"],
+        "properties": {
+          "who": {
+            "type": "string",
+            "description": "Quien (vendedor / cliente / equipo legal / etc)"
+          },
+          "what": {
+            "type": "string"
+          },
+          "when": {
+            "type": ["string", "null"],
+            "format": "date"
+          }
+        }
+      }
+    },
+    "risk_score": {
+      "type": "object",
+      "required": ["score", "framework", "justification"],
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "0 = deal perdido, 100 = listo para cerrar"
+        },
+        "framework": {
+          "type": "string",
+          "enum": ["BANT", "SPICED", "MEDDIC", "MEDDPICC", "custom"]
+        },
+        "justification": {
+          "type": "string",
+          "description": "Por que ese score, en 2-4 oraciones"
+        }
+      }
+    },
+    "follow_up_email": {
+      "type": "object",
+      "required": ["subject", "body"],
+      "properties": {
+        "subject": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "body": {
+          "type": "string",
+          "description": "Cuerpo del email en espanol Colombia, vos, sin em-dashes, referencia a objecciones reales de la llamada"
+        },
+        "cc": {
+          "type": "array",
+          "items": {"type": "string", "format": "email"}
+        }
+      }
+    },
+    "audit": {
+      "type": "object",
+      "description": "Metadata opcional pero util para el grading",
+      "properties": {
+        "transcription_model": {"type": "string"},
+        "llm_model": {"type": "string"},
+        "cost_usd": {"type": "number", "minimum": 0},
+        "latency_seconds": {"type": "number", "minimum": 0},
+        "prompt_caching_used": {"type": "boolean"},
+        "prompt_injection_detected": {"type": "boolean"}
+      }
+    }
+  }
+}

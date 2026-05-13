@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://labs.loggro.com/schemas/hubspot_mock.json",
+  "title": "HubSpot Mock Schema (Loggro reto VE-1770)",
+  "description": "Subset minimo de objetos HubSpot relevantes para los 4 tracks del reto. No es el schema real de HubSpot CRM, es un mock que captura los campos que tu pipeline va a leer o escribir.",
+  "type": "object",
+  "$defs": {
+    "Contact": {
+      "type": "object",
+      "required": ["id", "email", "lifecyclestage"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^CONT-[0-9]{6}$"},
+        "firstname": {"type": "string"},
+        "lastname": {"type": "string"},
+        "email": {"type": "string", "format": "email"},
+        "phone": {"type": ["string", "null"]},
+        "company": {"type": ["string", "null"]},
+        "jobtitle": {"type": ["string", "null"]},
+        "lifecyclestage": {
+          "type": "string",
+          "enum": ["subscriber", "lead", "marketing_qualified_lead", "sales_qualified_lead", "opportunity", "customer", "evangelist", "other"]
+        },
+        "lead_source": {
+          "type": ["string", "null"],
+          "enum": ["organic_search", "paid_search", "paid_social", "linkedin", "email", "referral", "whatsapp", "lia_chatbot", "event", "other", null]
+        },
+        "owner_id": {"type": ["string", "null"]},
+        "created_at": {"type": "string", "format": "date-time"},
+        "hs_persona": {
+          "type": ["string", "null"],
+          "enum": ["contador_pyme", "cfo_midmarket", "gerente_general", "rrhh", "gerente_hotel", "lider_retail", "ceo_pyme", null]
+        },
+        "consent_marketing": {"type": "boolean", "default": false},
+        "city": {"type": ["string", "null"]}
+      }
+    },
+    "Deal": {
+      "type": "object",
+      "required": ["id", "dealname", "amount_cop", "dealstage", "pipeline"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^DEAL-[0-9]{6}$"},
+        "dealname": {"type": "string"},
+        "amount_cop": {"type": "integer", "minimum": 0},
+        "pipeline": {
+          "type": "string",
+          "enum": ["pymes", "pos", "restobar", "nomina", "alojamientos", "enterprise", "facturacion_electronica"]
+        },
+        "dealstage": {
+          "type": "string",
+          "enum": ["appointmentscheduled", "qualifiedtobuy", "presentationscheduled", "decisionmakerboughtin", "contractsent", "closedwon", "closedlost"]
+        },
+        "closedate": {"type": ["string", "null"], "format": "date"},
+        "contact_ids": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^CONT-[0-9]{6}$"}
+        },
+        "owner_id": {"type": ["string", "null"]},
+        "probability": {"type": "number", "minimum": 0, "maximum": 1},
+        "source_campaign": {"type": ["string", "null"]},
+        "lost_reason": {
+          "type": ["string", "null"],
+          "enum": ["precio", "fit_tecnico", "competidor", "timing", "no_autoridad", "no_decision", "compliance", "otro", null]
+        }
+      }
+    },
+    "Campaign": {
+      "type": "object",
+      "required": ["id", "name", "channel", "budget_cop"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^CAMP-[0-9]{3}$"},
+        "name": {"type": "string"},
+        "channel": {
+          "type": "string",
+          "enum": ["linkedin_ads", "meta_ads", "google_ads", "email", "whatsapp", "organic_seo"]
+        },
+        "product_line": {
+          "type": "string",
+          "enum": ["pymes", "pos", "restobar", "nomina", "alojamientos", "enterprise", "facturacion_electronica", "lia", "multi"]
+        },
+        "objective": {
+          "type": "string",
+          "enum": ["leads", "awareness", "conversion", "retention"]
+        },
+        "start_date": {"type": "string", "format": "date"},
+        "end_date": {"type": "string", "format": "date"},
+        "budget_cop": {"type": "integer", "minimum": 0},
+        "spend_actual_cop": {"type": "integer", "minimum": 0},
+        "impressions": {"type": "integer", "minimum": 0},
+        "clicks": {"type": "integer", "minimum": 0},
+        "ctr": {"type": "number", "minimum": 0, "maximum": 1},
+        "leads": {"type": "integer", "minimum": 0},
+        "mql": {"type": "integer", "minimum": 0},
+        "sql": {"type": "integer", "minimum": 0},
+        "opportunities": {"type": "integer", "minimum": 0},
+        "customers": {"type": "integer", "minimum": 0},
+        "cac_estimated_cop": {"type": ["integer", "null"], "minimum": 0},
+        "audience": {"type": "string"},
+        "creative_brief": {"type": "string"},
+        "landing_page_url": {"type": "string"},
+        "lessons_learned": {"type": ["string", "null"]}
+      }
+    },
+    "ConversationIntel": {
+      "type": "object",
+      "description": "Output esperado para Track D: patch al CRM con insights de la llamada",
+      "required": ["call_id", "summary", "risk_score"],
+      "properties": {
+        "call_id": {"type": "string"},
+        "contact_id": {"type": ["string", "null"], "pattern": "^CONT-[0-9]{6}$"},
+        "deal_id": {"type": ["string", "null"], "pattern": "^DEAL-[0-9]{6}$"},
+        "transcript_url": {"type": ["string", "null"]},
+        "summary": {"type": "string", "maxLength": 500},
+        "objections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["category", "quote"],
+            "properties": {
+              "category": {
+                "type": "string",
+                "enum": ["precio", "timing", "autoridad", "fit_tecnico", "competidor", "compliance"]
+              },
+              "quote": {"type": "string"}
+            }
+          }
+        },
+        "competitors_mentioned": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["Siigo", "World Office", "Alegra", "ContaPyme", "Helisa", "SAP Business One", "NetSuite", "Otro"]
+          }
+        },
+        "next_steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["who", "what"],
+            "properties": {
+              "who": {"type": "string"},
+              "what": {"type": "string"},
+              "when": {"type": ["string", "null"], "format": "date"}
+            }
+          }
+        },
+        "risk_score": {"type": "integer", "minimum": 0, "maximum": 100},
+        "consent_denied": {"type": "boolean", "default": false}
+      }
+    }
+  },
+  "properties": {
+    "contacts": {"type": "array", "items": {"$ref": "#/$defs/Contact"}},
+    "deals": {"type": "array", "items": {"$ref": "#/$defs/Deal"}},
+    "campaigns": {"type": "array", "items": {"$ref": "#/$defs/Campaign"}},
+    "conversation_intel": {"type": "array", "items": {"$ref": "#/$defs/ConversationIntel"}}
+  }
+}

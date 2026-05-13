@@ -1,0 +1,482 @@
+[
+  {
+    "id": "ACC-001",
+    "name": "Tiendas Ara",
+    "domain": "tiendasara.com.co",
+    "sector": "retail",
+    "employees_estimate": 480,
+    "city": "Bogota",
+    "revenue_band": "upper_mid_500_1000",
+    "current_erp": null,
+    "signals": [
+      "Cadena de hard discount con expansion sostenida en Colombia",
+      "Publica vacantes recurrentes de Analista Contable en LinkedIn",
+      "Operacion multi-sede que demanda consolidacion contable robusta"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-002",
+    "name": "Tostao Cafe y Pan",
+    "domain": "tostaocafeypan.com",
+    "sector": "retail",
+    "employees_estimate": 450,
+    "city": "Bogota",
+    "revenue_band": "upper_mid_500_1000",
+    "current_erp": null,
+    "signals": [
+      "Cadena con mas de 500 puntos en Colombia (modelo retail + gastronomia)",
+      "Publico vacante de Coordinador de Costos en marzo 2026",
+      "Mencionan en prensa apertura de centro de distribucion en Funza"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-003",
+    "name": "Calzado Bucaramanga",
+    "domain": "calzadobga.com.co",
+    "sector": "retail",
+    "employees_estimate": 120,
+    "city": "Bucaramanga",
+    "revenue_band": "small_50_200",
+    "current_erp": "World Office",
+    "signals": [
+      "Fabricante y retailer regional de calzado",
+      "En su LinkedIn mencionan apertura de tienda virtual en 2025",
+      "Vacante reciente de Auxiliar Contable con experiencia en facturacion electronica"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-004",
+    "name": "Distrihogar Pereira",
+    "domain": "distrihogar-pereira.com.co",
+    "sector": "retail",
+    "employees_estimate": 85,
+    "city": "Pereira",
+    "revenue_band": "small_50_200",
+    "current_erp": "Siigo",
+    "signals": [
+      "Retail de electrodomesticos en eje cafetero",
+      "Mencionan en pagina web 4 sucursales activas",
+      "Buscan integrar e-commerce con POS"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-005",
+    "name": "Moda Express Cali",
+    "domain": "modaexpress.com.co",
+    "sector": "retail",
+    "employees_estimate": 160,
+    "city": "Cali",
+    "revenue_band": "small_50_200",
+    "current_erp": "Excel",
+    "signals": [
+      "Cadena de moda femenina con 12 tiendas en Valle del Cauca",
+      "Vacante publica de Jefe de Contabilidad (ago 2025)",
+      "Operacion aun apoyada en hojas de calculo segun perfil del CFO"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-006",
+    "name": "Crystal S.A.S.",
+    "domain": "crystal.com.co",
+    "sector": "manufactura",
+    "employees_estimate": 500,
+    "city": "Medellin",
+    "revenue_band": "upper_mid_500_1000",
+    "current_erp": "SAP B1",
+    "signals": [
+      "Manufactura textil con plantas en Antioquia",
+      "Anuncio publico de inversion en automatizacion de planta en 2025",
+      "Operacion B2B con exportaciones (necesidad de FE DIAN robusta)"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-007",
+    "name": "Industrias Haceb",
+    "domain": "haceb.com",
+    "sector": "manufactura",
+    "employees_estimate": 500,
+    "city": "Medellin",
+    "revenue_band": "upper_mid_500_1000",
+    "current_erp": "SAP B1",
+    "signals": [
+      "Fabricante de electrodomesticos con planta en Copacabana",
+      "Reportes de prensa sobre transformacion digital en su cadena de suministro",
+      "Vacantes recurrentes de Analista de Procesos / RevOps"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-008",
+    "name": "Plasticos Andinos",
+    "domain": "plasticosandinos.com.co",
+    "sector": "manufactura",
+    "employees_estimate": 220,
+    "city": "Bogota",
+    "revenue_band": "mid_200_500",
+    "current_erp": "Helisa",
+    "signals": [
+      "Fabricante de empaques plasticos para industria de alimentos",
+      "Mencionan certificacion ISO 9001 reciente",
+      "Buscan optimizar costeo por orden de produccion"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-009",
+    "name": "Metalmecanica del Norte",
+    "domain": "metalnorte.com.co",
+    "sector": "manufactura",
+    "employees_estimate": 95,
+    "city": "Barranquilla",
+    "revenue_band": "small_50_200",
+    "current_erp": "ContaPyme",
+    "signals": [
+      "Maquila para sector petroquimico costa Caribe",
+      "Vacante de Contador con conocimiento en NIIF para PYMES",
+      "Operacion con alto volumen de retenciones y autoretenciones"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-010",
+    "name": "Agricola Santamaria",
+    "domain": "agricolasantamaria.com.co",
+    "sector": "agropecuario",
+    "employees_estimate": 180,
+    "city": "Armenia",
+    "revenue_band": "mid_200_500",
+    "current_erp": "Siigo",
+    "signals": [
+      "Productor cafetero del eje cafetero con marca propia",
+      "Inversion publica en trazabilidad de cultivos en 2025",
+      "Buscan integrar nomina rural con contabilidad central"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-011",
+    "name": "Avicola El Madrono",
+    "domain": "avicolamadrono.com.co",
+    "sector": "agropecuario",
+    "employees_estimate": 240,
+    "city": "Ibague",
+    "revenue_band": "mid_200_500",
+    "current_erp": "World Office",
+    "signals": [
+      "Productor avicola con 3 granjas en Tolima",
+      "Mencionan en LinkedIn proyecto de costos por lote",
+      "Vacante reciente de Analista Financiero"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-012",
+    "name": "Inversiones Ganaderas del Llano",
+    "domain": "ganaderasllano.com.co",
+    "sector": "agropecuario",
+    "employees_estimate": 70,
+    "city": "Bogota",
+    "revenue_band": "small_50_200",
+    "current_erp": null,
+    "signals": [
+      "Empresa de cria y comercializacion de ganado bovino",
+      "Operacion multi-hacienda en Casanare y Meta",
+      "Sin sistema ERP centralizado segun perfil del gerente financiero"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-013",
+    "name": "Hoteles Estelar",
+    "domain": "hotelesestelar.com",
+    "sector": "hoteleria",
+    "employees_estimate": 500,
+    "city": "Bogota",
+    "revenue_band": "upper_mid_500_1000",
+    "current_erp": "NetSuite",
+    "signals": [
+      "Cadena hotelera colombiana con 19+ propiedades",
+      "Publican vacantes de Revenue Manager con frecuencia",
+      "Operacion multi-marca que demanda consolidacion contable por unidad"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-014",
+    "name": "Hoteles Cosmos",
+    "domain": "hotelescosmos.com",
+    "sector": "hoteleria",
+    "employees_estimate": 350,
+    "city": "Cartagena",
+    "revenue_band": "mid_200_500",
+    "current_erp": null,
+    "signals": [
+      "Cadena hotelera con presencia en Caribe y Andina",
+      "Vacante reciente de Jefe Administrativo y Financiero",
+      "Operacion estacional con alta demanda en temporada alta"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-015",
+    "name": "Eco Lodge Sierra Nevada",
+    "domain": "ecolodgesierra.com.co",
+    "sector": "hoteleria",
+    "employees_estimate": 65,
+    "city": "Barranquilla",
+    "revenue_band": "small_50_200",
+    "current_erp": "Alegra",
+    "signals": [
+      "Hotel boutique ecoturistico en Sierra Nevada de Santa Marta",
+      "Mencionan en redes integracion reciente con OTAs",
+      "Operacion contable apoyada en Alegra (limite cercano de plan)"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-016",
+    "name": "Clinica del Country",
+    "domain": "clinicadelcountry.com",
+    "sector": "salud",
+    "employees_estimate": 500,
+    "city": "Bogota",
+    "revenue_band": "upper_mid_500_1000",
+    "current_erp": "SAP B1",
+    "signals": [
+      "Clinica de alta complejidad en Bogota",
+      "Procesos de habilitacion y acreditacion en salud",
+      "Operacion con alto volumen de cuentas medicas y glosas"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-017",
+    "name": "IPS Medilaser",
+    "domain": "medilaser.com.co",
+    "sector": "salud",
+    "employees_estimate": 280,
+    "city": "Ibague",
+    "revenue_band": "mid_200_500",
+    "current_erp": "Otro",
+    "signals": [
+      "Red de IPS oncologica con presencia regional",
+      "Operacion con multiples EPS (alto volumen de facturacion electronica)",
+      "Vacante reciente de Coordinador de Cartera"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-018",
+    "name": "Laboratorio Clinico Andino",
+    "domain": "laboratorioandino.com.co",
+    "sector": "salud",
+    "employees_estimate": 110,
+    "city": "Manizales",
+    "revenue_band": "small_50_200",
+    "current_erp": "Helisa",
+    "signals": [
+      "Red de laboratorios clinicos en eje cafetero",
+      "Vacante reciente de Analista de Facturacion Electronica",
+      "Operacion B2B con EPS y empresas privadas"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-019",
+    "name": "Transportes Coltrans",
+    "domain": "coltrans.com.co",
+    "sector": "logistica",
+    "employees_estimate": 320,
+    "city": "Bogota",
+    "revenue_band": "mid_200_500",
+    "current_erp": "SAP B1",
+    "signals": [
+      "Operador logistico de carga internacional con sedes en 5 ciudades",
+      "Mencionan en LinkedIn proyecto de torre de control logistica",
+      "Operacion con flota propia y tercerizada"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-020",
+    "name": "Logistica Caribe Express",
+    "domain": "caribeexpress.com.co",
+    "sector": "logistica",
+    "employees_estimate": 140,
+    "city": "Barranquilla",
+    "revenue_band": "small_50_200",
+    "current_erp": "World Office",
+    "signals": [
+      "Operador logistico regional en costa Caribe",
+      "Vacante reciente de Jefe de Contabilidad y Costos",
+      "Operacion con alto volumen de combustible y peajes"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-021",
+    "name": "Distribuidora Andina de Carga",
+    "domain": "andinacarga.com.co",
+    "sector": "logistica",
+    "employees_estimate": 90,
+    "city": "Medellin",
+    "revenue_band": "small_50_200",
+    "current_erp": "Siigo",
+    "signals": [
+      "Transporte terrestre de carga seca entre Antioquia y costa",
+      "Operacion en migracion desde Excel hacia un ERP integrado",
+      "Mencionan dificultad para conciliar combustible y mantenimiento"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-022",
+    "name": "Constructora Bolivar",
+    "domain": "constructorabolivar.com",
+    "sector": "construccion",
+    "employees_estimate": 500,
+    "city": "Bogota",
+    "revenue_band": "upper_mid_500_1000",
+    "current_erp": "SAP B1",
+    "signals": [
+      "Constructora de vivienda con proyectos en varias ciudades",
+      "Operacion con multiples fideicomisos y patrimonios autonomos",
+      "Mencionan transformacion digital en su reporte anual"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-023",
+    "name": "Conconcreto",
+    "domain": "conconcreto.com",
+    "sector": "construccion",
+    "employees_estimate": 500,
+    "city": "Medellin",
+    "revenue_band": "upper_mid_500_1000",
+    "current_erp": "SAP B1",
+    "signals": [
+      "Constructora infraestructura y edificacion, cotizada en BVC",
+      "Operacion con consorcios y uniones temporales",
+      "Reporte anual destaca eficiencia en cierre contable mensual"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-024",
+    "name": "Constructora del Valle",
+    "domain": "constructoradelvalle.com.co",
+    "sector": "construccion",
+    "employees_estimate": 130,
+    "city": "Cali",
+    "revenue_band": "small_50_200",
+    "current_erp": "ContaPyme",
+    "signals": [
+      "Constructora regional con 4 proyectos activos de vivienda",
+      "Vacante reciente de Analista de Costos de Obra",
+      "Operacion con cortes de obra mensuales"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-025",
+    "name": "Brigard Urrutia",
+    "domain": "bu.com.co",
+    "sector": "servicios_profesionales",
+    "employees_estimate": 400,
+    "city": "Bogota",
+    "revenue_band": "upper_mid_500_1000",
+    "current_erp": "NetSuite",
+    "signals": [
+      "Firma legal lider en Colombia",
+      "Operacion con facturacion por horas y proyectos",
+      "Alta exigencia en reportes financieros por socio"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-026",
+    "name": "Consultora Sigma",
+    "domain": "consultorasigma.com.co",
+    "sector": "servicios_profesionales",
+    "employees_estimate": 75,
+    "city": "Bogota",
+    "revenue_band": "small_50_200",
+    "current_erp": "Siigo",
+    "signals": [
+      "Consultora boutique en estrategia y operaciones",
+      "Crecimiento de equipo ~30% en ultimo ano segun LinkedIn",
+      "Buscan integrar timesheets con facturacion"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-027",
+    "name": "Auditores Asociados Antioquia",
+    "domain": "auditoresasociados.com.co",
+    "sector": "servicios_profesionales",
+    "employees_estimate": 60,
+    "city": "Medellin",
+    "revenue_band": "small_50_200",
+    "current_erp": "World Office",
+    "signals": [
+      "Firma de auditoria y revisoria fiscal regional",
+      "Operacion con clientes multi-sector (necesidad de templates)",
+      "Vacante reciente de Auxiliar Contable Senior"
+    ],
+    "verified": false
+  },
+  {
+    "id": "ACC-028",
+    "name": "Frisby S.A.",
+    "domain": "frisby.com.co",
+    "sector": "gastronomia",
+    "employees_estimate": 500,
+    "city": "Pereira",
+    "revenue_band": "upper_mid_500_1000",
+    "current_erp": "SAP B1",
+    "signals": [
+      "Cadena de pollo frito mas grande de Colombia",
+      "Operacion con franquicias y tiendas propias",
+      "Inversion publica en transformacion digital en 2024-2025"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-029",
+    "name": "Restaurantes Andres D.C.",
+    "domain": "restaurantesandresdc.com",
+    "sector": "gastronomia",
+    "employees_estimate": 350,
+    "city": "Bogota",
+    "revenue_band": "mid_200_500",
+    "current_erp": null,
+    "signals": [
+      "Operador de Andres Carne de Res y restaurantes derivados",
+      "Operacion con alto volumen de inventario perecedero",
+      "Vacante reciente de Director Financiero"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ACC-030",
+    "name": "Distribuidora Nacional de Alimentos",
+    "domain": "distrinal.com.co",
+    "sector": "distribucion",
+    "employees_estimate": 260,
+    "city": "Bogota",
+    "revenue_band": "mid_200_500",
+    "current_erp": "SAP B1",
+    "signals": [
+      "Distribuidor mayorista de alimentos para canal tradicional",
+      "Operacion con flota propia de reparto y CEDI en Bogota",
+      "Mencionan en LinkedIn proyecto de ruteo inteligente"
+    ],
+    "verified": false
+  }
+]

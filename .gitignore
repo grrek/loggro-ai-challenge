@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+.next/
+.astro/
+
+# Env
+.env
+.env.local
+.env.*.local
+*.key
+
+# Held-out eval set: secreto, no commitear nunca
+eval/held_out/*
+!eval/held_out/.gitkeep
+!eval/held_out/README.md
+
+# Audio Track D: los MP3 se distribuyen via GitHub Release, no commit en repo
+data/track-d-intel/audio/*.mp3
+data/track-d-intel/audio/*.wav
+data/track-d-intel/audio/*.m4a
+!data/track-d-intel/audio/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
+.parcel-cache/

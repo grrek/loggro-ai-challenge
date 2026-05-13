@@ -1,0 +1,112 @@
+[
+  {
+    "id": "RESP-001",
+    "channel": "email",
+    "account_id": "ACC-005",
+    "from": "Catalina Ortiz (Jefe de Contabilidad)",
+    "received_at": "2026-03-14T15:22:00-05:00",
+    "subject": "Re: Como Moda Express puede cerrar contabilidad sin Excel",
+    "body": "Hola Gregorio, gracias por el correo. La verdad es que justo estamos en ese dolor: cerramos cada mes con 6 hojas distintas y no aguantamos mas. Me cuadras una llamada la proxima semana para entender que ofrece Loggro? Disponibilidad martes o miercoles en la manana. Saludos.",
+    "groundtruth_intent": "pedir_reunion",
+    "confidence": "high"
+  },
+  {
+    "id": "RESP-002",
+    "channel": "email",
+    "account_id": "ACC-021",
+    "from": "Felipe Restrepo (Gerente Administrativo y Financiero)",
+    "received_at": "2026-03-21T10:05:00-05:00",
+    "subject": "Re: Loggro para operadores logisticos",
+    "body": "Gregorio, buen dia. Si nos interesa explorar. Ya venimos evaluando moverNos de Excel hacia un ERP integrado y Loggro esta en la lista corta junto con World Office. Te agradezco si me pasas un overview de modulos, precios referenciales y casos de exito en logistica terrestre. Quedo atento.",
+    "groundtruth_intent": "interesado",
+    "confidence": "high"
+  },
+  {
+    "id": "RESP-003",
+    "channel": "whatsapp",
+    "account_id": "ACC-015",
+    "from": "Daniela Pena (Administradora)",
+    "received_at": "2026-04-02T08:47:00-05:00",
+    "subject": null,
+    "body": "Hola buenos dias gracias por escribir pero ahorita estamos full con la temporada de Semana Santa, no puedo atender nada hasta despues del 5 de abril. Me escribis luego porfa?",
+    "groundtruth_intent": "objecion",
+    "confidence": "low"
+  },
+  {
+    "id": "RESP-004",
+    "channel": "email",
+    "account_id": "ACC-009",
+    "from": "Mauricio Cantillo (Contador General)",
+    "received_at": "2026-04-08T17:33:00-05:00",
+    "subject": "Re: Loggro Enterprise para metalmecanica",
+    "body": "Buenas tardes. Le agradezco la informacion pero ya tenemos contrato vigente con ContaPyme hasta 2027 y no estamos evaluando cambios. Si llegamos a abrir el tema le aviso. Que tenga buen dia.",
+    "groundtruth_intent": "objecion",
+    "confidence": "high"
+  },
+  {
+    "id": "RESP-005",
+    "channel": "email",
+    "account_id": "ACC-016",
+    "from": "Andrea Pulido (Directora Financiera)",
+    "received_at": "2026-04-15T11:18:00-05:00",
+    "subject": "Re: Loggro para clinicas y IPS",
+    "body": "Gregorio, gracias por el contacto. Hoy estamos sobre SAP B1 y el roadmap del proximo ano esta cerrado. Aparte, en salud manejamos integracion con HIS y modulos de cuentas medicas que Loggro hasta donde entiendo no tiene a la altura de un sectorial. Si tienen algo especifico para IPS de alta complejidad con buena gusto lo revisamos en 2027.",
+    "groundtruth_intent": "objecion",
+    "confidence": "high"
+  },
+  {
+    "id": "RESP-006",
+    "channel": "whatsapp",
+    "account_id": "ACC-011",
+    "from": "Jhon Bedoya (Analista Financiero)",
+    "received_at": "2026-04-22T19:14:00-05:00",
+    "subject": null,
+    "body": "Buenas, gracias por escribirme. Yo soy analista nada mas, esto lo decide don Hernando que es el dueno. Le paso tu correo? El numero que tienen es de la empresa pero no es contacto comercial, te pido por favor no llamar mas a ese fijo.",
+    "groundtruth_intent": "fuera_de_scope",
+    "confidence": "medium"
+  },
+  {
+    "id": "RESP-007",
+    "channel": "email",
+    "account_id": "ACC-026",
+    "from": "Laura Gomez (Socia Operaciones)",
+    "received_at": "2026-04-28T09:42:00-05:00",
+    "subject": "Re: Loggro para consultoras boutique",
+    "body": "Hola Gregorio, justo estabamos hablando de esto en comite la semana pasada. Tenemos un problema feo de integrar timesheets con facturacion y Siigo se nos quedo corto. Tienes algo concreto que puedas mostrarme? Idealmente un demo enfocado en servicios profesionales con horas facturables, no el demo generico de ERP. Si es asi, agendemos cuanto antes.",
+    "groundtruth_intent": "pedir_reunion",
+    "confidence": "high"
+  },
+  {
+    "id": "RESP-008",
+    "channel": "whatsapp",
+    "account_id": "ACC-024",
+    "from": "Camilo Mejia (Director de Obra)",
+    "received_at": "2026-05-02T13:28:00-05:00",
+    "subject": null,
+    "body": "Hola hermano interesante lo que mandas pero yo soy de obra no de contabilidad jeje. Lo financiero lo ve don Octavio y la sra Maria del area administrativa. Te paso el correo de Maria? mariag.constructoradelvalle@gmail.com",
+    "groundtruth_intent": "fuera_de_scope",
+    "confidence": "high"
+  },
+  {
+    "id": "RESP-009",
+    "channel": "email",
+    "account_id": "ACC-008",
+    "from": "Sergio Beltran (Gerente Financiero)",
+    "received_at": "2026-05-05T16:55:00-05:00",
+    "subject": "Re: Loggro vs Helisa para manufactura plastica",
+    "body": "Gregorio, buen dia. Mire, no le voy a mentir, estamos un poco cansados de Helisa pero tambien hemos visto demos de Siigo y SAP B1 y todos prometen lo mismo. Que tiene Loggro que sea realmente distinto para manufactura? Costeo por orden, integracion con planta, OEE? Antes de meter una reunion necesito que me mande un one pager con eso y referencias de plantas similares a la nuestra. Si me convence el material agendamos.",
+    "groundtruth_intent": "interesado",
+    "confidence": "medium"
+  },
+  {
+    "id": "RESP-010",
+    "channel": "whatsapp",
+    "account_id": "ACC-010",
+    "from": "Patricia Velez (Contadora)",
+    "received_at": "2026-05-09T07:18:00-05:00",
+    "subject": null,
+    "body": "Buenos dias, recibido. interesante el tema de nomina rural pero ahorita en cosecha estoy a mil. mandeme info por correo mejor y yo le contesto cuando pueda. gracias",
+    "groundtruth_intent": "interesado",
+    "confidence": "low"
+  }
+]
