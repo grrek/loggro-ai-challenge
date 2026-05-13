@@ -68,7 +68,9 @@ make eval
 |   |-- AI_STACK_template.md
 |   |-- ADR_template.md
 |   |-- PREMORTEM_template.md
-|   `-- audio-scripts/        guiones de los MP3 (referencia)
+|   |-- audio-scripts/        guiones de los MP3 (referencia)
+|   `-- sessions/             transcripts/exports/screenshots de tus sesiones con IA
+|-- prompts/                  prompts versionados que tu pipeline usa
 |-- legal/
 |   |-- consentimiento_grabacion.md   Habeas Data Ley 1581/2012
 |   `-- propiedad_intelectual.md
@@ -97,6 +99,8 @@ Sin estos artefactos no se evalua tu entrega.
 3. **Loom de 5 a 10 min** defendiendo 3 decisiones (link en tu README final)
 4. **Judge extension** sobre `eval/judge_prompt.md` con 2-3 criterios tuyos + sabotage test
 5. **CLAUDE.md tuyo** lleno con substance (lo corremos por AgentLint en vivo)
+6. **Prompts versionados** en `prompts/` o `eval/prompts/` (los prompts reales que tu pipeline usa, con README breve por cada uno)
+7. **Transcripts/exports de tus sesiones IA** en `docs/sessions/` (2 a 3 sesiones representativas: Claude Code `/export`, transcript de Cursor, screenshot del chat. No tiene que ser todo, solo lo que muestre como trabajaste)
 
 ## Como pedir ayuda
 
