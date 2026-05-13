@@ -1,6 +1,6 @@
 # Backlog antes de lanzar el reto al primer candidato
 
-Lo que falta para que el repo template este 100% listo. Auditado 2026-05-13.
+Lo que falta para que el repo template este 100% listo. Auditado 2026-05-13, simplificado tras eliminacion del eval automatizado.
 
 ## 🔴 Bloqueantes (sin esto, un candidato real no puede arrancar)
 
@@ -8,41 +8,14 @@ Lo que falta para que el repo template este 100% listo. Auditado 2026-05-13.
 
 | Track | Archivo | Estado | Meta | Falta |
 |-------|---------|--------|------|-------|
-| B | `data/track-b-insights/campaigns.json` | ✅ **CERRADO** | 124 campañas reales Q1-Q2 2026 (Google + Meta + LinkedIn sintética) con 3 anomalías plantadas + 2 engañosas | — |
-| C | `data/track-c-pieces/briefs.json` | 1 entrada placeholder | 3 briefs (DIAN, cross-sell POS, retencion Nomina) | **2 briefs más** |
-| C | `data/track-c-pieces/good_pieces.json` | 1 entrada placeholder | 10 piezas referencia que pasan brand voice | **9 piezas más** |
-| C | `data/track-c-pieces/bad_pieces.json` | 1 entrada placeholder | 10 piezas que deberian rechazarse (con razon documentada) | **9 piezas más** |
+| A | `data/track-a-outbound/ICP.md` | ✅ **CERRADO** | ICP escrito con criterios + senales + fuentes | — |
+| A | `data/track-a-outbound/accounts_example.json` | ✅ **CERRADO** | 30 cuentas de referencia formato canonico | — |
+| A | `data/track-a-outbound/responses_sample.json` | ✅ **CERRADO** | 10 respuestas con ground_truth | — |
+| B | `data/track-b-insights/campaigns.json` | ✅ **CERRADO** | 124 campanas reales Q1-Q2 2026 + 3 anomalias plantadas | — |
+| C | `data/track-c-pieces/briefs.json` | 1 entrada placeholder | 3 briefs (DIAN, cross-sell POS, retencion Nomina) | **2 briefs mas** |
+| C | `data/track-c-pieces/good_pieces.json` | 1 entrada placeholder | 10 piezas referencia que pasan brand voice (extraer de Meta Ad Library Loggro) | **9 piezas mas** |
+| C | `data/track-c-pieces/bad_pieces.json` | 1 entrada placeholder | 10 piezas que deberian rechazarse (LLM-generadas con flaws) | **9 piezas mas** |
 | D | `data/track-d-intel/*.mp3` | 0 archivos | 9 MP3 (3 obligatorios + 1 edge case + 5 opcionales) basados en los scripts en `docs/audio-scripts/` | **9 MP3s** |
-
-### Eval held-out (lo más crítico del eval automatizado)
-
-**Quién hace qué:**
-- El **candidato** implementa `run_track(track, cases)` en `eval/eval.py` que toma `cases` y los pasa por su pipeline. El skeleton ya está, él rellena la lógica.
-- **Loggro** mantiene 5 casos secretos por track (con groundtruth conocido), los carga al repo del candidato post-entrega, corre `make eval`, ve si pasa los thresholds.
-
-**Lo que necesitamos generar (NO va al repo público):**
-
-| Archivo (privado Loggro) | Estado | Schema esperado |
-|---|---|---|
-| `cases_a.json` (5 casos) | no existe | `[{"case_id": "a1", "account": {...cuenta a prospectar}, "ground_truth": {"intent": "interesado_negociar"\|"no_interesado"\|"requiere_info"\|...}}]` |
-| `cases_b.json` (5 casos) | no existe | `[{"case_id": "b1", "campaigns_subset": [...30 campañas con 1 anomalía], "ground_truth": {"anomaly_id": "CAMP-007", "anomaly_type": "audience_fatigue"}}]` |
-| `cases_c.json` (5 casos) | no existe | `[{"case_id": "c1", "brief": {...}, "channel": "instagram", "ground_truth": {"brand_voice_pass": true, "max_chars": 280, "must_include": [...], "must_exclude": [...]}}]` |
-| `cases_d.json` (5 casos) | no existe | `[{"case_id": "d1", "audio_file": "https://...", "transcript_expected": "...", "ground_truth": {"objections": [...], "competitors": [...], "risk_score_range": [0.4, 0.7]}}]` |
-
-**Falta también: documentar el schema en eval/README.md**
-- El candidato necesita saber QUÉ va a recibir en `cases` cuando Loggro corra el eval. Hoy `eval/README.md` solo dice "Loggro lo provee". Hay que detallar el schema por track (qué keys tiene cada case, qué groundtruth se espera) para que el candidato pueda implementar `run_track` sin adivinar.
-- Sugerido: agregar sección "Schema de cada case por track" con un ejemplo dummy (no real) por cada uno.
-
-**Decision sobre el flujo:**
-1. Loggro genera los 4 archivos privadamente (no commiteados, solo internos)
-2. Cuando el candidato entrega su repo, Loggro hace `cp cases_X.json candidato-repo/eval/held_out/cases.json`
-3. Corre `cd candidato-repo && python eval/eval.py --track X`
-4. Si pasa threshold → entrevista. Si no → conversación de revisión.
-
-**Decisión adicional necesaria:** ¿quién genera los cases?
-- Opción A: Edison + Grego diseñan a mano (4-6 horas)
-- Opción B: Generador con LLM + curación humana (2 horas con review)
-- Opción C: Reusar 5 cases del dataset público marcándolos como held-out internamente (más fácil pero menos AI-resistant)
 
 ## 🟡 Importantes (no bloquean pero mejoran señal)
 
@@ -59,7 +32,7 @@ Lo que falta para que el repo template este 100% listo. Auditado 2026-05-13.
 
 ### CLAUDE.md template
 
-El skeleton actual (105 lineas) tiene los headers correctos con `<!-- comments -->` guia. Esta bien para template — el candidato lo llena. **Verificar que AgentLint corre OK contra el skeleton vacio** (no debe dar 0/100 por estar vacio, debe dar algo razonable porque la estructura esta).
+El skeleton actual tiene los headers correctos con `<!-- comments -->` guia. **Verificar que AgentLint corre OK contra el skeleton vacio** (no debe dar 0/100, debe dar algo razonable porque la estructura esta).
 
 ### Brand voice
 
@@ -69,31 +42,28 @@ El skeleton actual (105 lineas) tiene los headers correctos con `<!-- comments -
 
 ## 🟢 Nice-to-have (post-lanzamiento)
 
-- **GitHub Actions** `.github/workflows/eval.yml`: hoy corre el eval skeleton. Cuando esten los held-out, agregar matrix por track para correr automaticamente en cada PR
 - **Docker compose** opcional para LLM broker local (mock) si el candidato quiere desarrollar sin consumir budget
 - **Postman/Bruno collection** con la API del broker
-- **Loom de Grego explicando el repo** (existe en `/growth-engineer` como `PUBLIC_LOOM_URL` o el video self-hosted)
+- **Loom de Grego explicando el repo** (ya existe en `/growth-engineer` como video HeyGen self-hosted)
 
-## Como completarlo
+## ❌ Removido del scope
 
-### Track B (28 campañas)
-- Generar con script Python que produzca 30 entradas variadas siguiendo el schema actual (canales, productos, presupuestos, funnel, anomalias plantadas)
-- Plantar las 3 anomalias listadas en el README + 2 campañas engañosas
-- Subir como commit unico
+Los siguientes items quedaron OUT tras la decision de **eliminar el eval automatizado** (los 4 tracks son demasiado heterogeneos para un harness unificado):
 
-### Track C (briefs + piezas)
-- Pedir al equipo de Marketing (Ana Maria, Kissy) muestras reales recientes anonimizadas
-- Generar variaciones con LLM siguiendo el formato actual
+- ~~`eval/eval.py` skeleton + implementacion de `run_track`~~ → eliminado, reemplazado por LLM judge async
+- ~~`eval/held_out/cases_a.json` (5 casos Track A)~~ → no aplica
+- ~~`eval/held_out/cases_b.json` (5 casos Track B)~~ → ya estaban en `private/eval-held-out/`, dejados como referencia historica
+- ~~`eval/held_out/cases_c.json` (5 casos Track C)~~ → no aplica
+- ~~`eval/held_out/cases_d.json` (5 casos Track D)~~ → no aplica
+- ~~`make eval` como comando del Makefile~~ → reemplazado por `make judge` opcional
 
-### Track D (9 MP3)
-- Opcion 1: TTS con ElevenLabs usando los scripts ya escritos en `docs/audio-scripts/`
-- Opcion 2: Whisper inverso (grabar humanos)
-- Opcion 3: Mix (3 reales + 6 sinteticos para ahorrar tiempo)
+## Plan de lanzamiento (orden sugerido)
 
-### Held-out cases
-- 5 casos por track, similares en formato al input pero NO en el dataset publico
-- Plantear scenarios edge donde la solucion no-trivial gana
-- Mantenerlos en un repo privado del equipo Loggro
+1. **Track C piezas** (3-4h): scrapear Meta Ad Library Loggro para good_pieces, LLM-gen bad_pieces, redactar 2 briefs faltantes
+2. **Track D audios** (2-3h): ElevenLabs Studio multi-speaker contra los 9 scripts ya escritos
+3. **AI_AUDIT_LOG_template examples** (30 min): 1 entrada buena + 1 mala al principio del template
+4. **AgentLint test contra CLAUDE.md vacio** (15 min): correr y ajustar el skeleton si da <30
+5. **Manual end-to-end test** (1h): tomar el rol de candidato, clonar el template, simular 2-3h de trabajo, ver que se siente
 
 ## Owner
 

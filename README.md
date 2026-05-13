@@ -30,8 +30,8 @@ cp .env.example .env
 # 3. Instala dependencias
 make install
 
-# 4. Verifica que el eval skeleton corre
-make eval
+# 4. Lee la rúbrica del judge LLM
+cat eval/judge_prompt.md
 
 # 5. Firma el consentimiento Habeas Data
 # Leelo en legal/consentimiento_grabacion.md y firmalo digitalmente
@@ -51,17 +51,16 @@ make eval
 |-- Makefile                  comandos basicos
 |-- .env.example              virtual key del broker + base URL
 |-- data/
-|   |-- track-a-outbound/     30 cuentas + 10 respuestas sinteticas
-|   |-- track-b-insights/     30 campanas activas Q1-Q2 2026 (JSON)
+|   |-- track-a-outbound/     ICP.md + 30 cuentas ejemplo + 10 respuestas sinteticas
+|   |-- track-b-insights/     124 campanas reales Q1-Q2 2026 (JSON) + anomalias plantadas
 |   |-- track-c-pieces/       3 briefs + 10 buenas + 10 malas piezas
 |   `-- track-d-intel/        9 MP3 (3 obligatorios + 1 edge case + 5 opcionales)
 |-- schemas/
 |   |-- hubspot_mock.json     contactos, deals, campanas, conversations
 |   `-- insights_schema.json  output esperado de Track D
 |-- eval/
-|   |-- judge_prompt.md       judge LLM v1.0 publico; lo extiendes en el Apendice.5
-|   |-- eval.py               skeleton; implementa run_track para tu track
-|   `-- held_out/             secreto; Loggro lo provee al evaluarte
+|   |-- judge_prompt.md       judge LLM v1.0 publico; lo extiendes en el Apendice.A5
+|   `-- README.md             como te evaluamos
 |-- docs/
 |   |-- BRAND_VOICE.md        manual de marca Loggro condensado
 |   |-- AI_AUDIT_LOG_template.md

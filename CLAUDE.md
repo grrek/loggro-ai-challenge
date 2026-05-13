@@ -28,7 +28,7 @@ Ejemplo:
 - `make install` instala deps
 - `make dev` corre el pipeline contra data/track-X
 - `make test` corre pytest
-- `make eval` corre eval/eval.py contra held_out
+- `make judge` (opcional) corre tu judge extendido contra outputs malos
 - `python -m mi_paquete.cli --input data/track-d-intel/audio/demo_A_contadora.mp3` ejemplo single-file
 -->
 

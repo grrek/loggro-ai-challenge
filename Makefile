@@ -1,11 +1,11 @@
-.PHONY: help install dev test eval lint clean
+.PHONY: help install dev test judge lint clean
 
 help:
 	@echo "Comandos disponibles:"
 	@echo "  make install   instala dependencias (uv sync o pip)"
 	@echo "  make dev       corre tu pipeline en modo desarrollo (definilo vos)"
 	@echo "  make test      corre pytest"
-	@echo "  make eval      corre eval/eval.py contra dataset held_out"
+	@echo "  make judge     (opcional) corre tu judge extendido contra outputs malos"
 	@echo "  make lint      corre ruff check"
 	@echo "  make clean     borra caches y artefactos temporales"
 
@@ -19,8 +19,9 @@ dev:
 test:
 	pytest -v
 
-eval:
-	python eval/eval.py
+judge:
+	@echo "Definí cómo correr tu judge extendido aquí."
+	@echo "Sugerido: python scripts/run_judge.py --prompt eval/judge_prompt_extended.md --target outputs/"
 
 lint:
 	ruff check .

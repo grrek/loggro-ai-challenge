@@ -1,145 +1,78 @@
-# Dataset Track A (Outbound Automation): Reto VE-1770
+# Track A — Outbound Automation (Reto VE-1770)
 
-Este dataset alimenta el Track A del reto tecnico de Loggro para la vacante VE-1770 (Analista de Automatizacion & RevOps). El candidato debe construir un sistema de outbound (scraping, enriquecimiento, secuencia email + WhatsApp, clasificacion de respuestas) que pueda procesar estos archivos como entrada.
+Construyes un sistema de outbound end-to-end: **identificación de cuentas, enrichment, secuencia email + WhatsApp, clasificación de respuestas**.
 
 ## Archivos
 
-| Archivo | Que contiene | Filas |
+| Archivo | Que es | Quién lo usa |
 |---|---|---|
-| `accounts.json` | 30 cuentas (empresas mid-market colombianas) candidatas a ser prospectadas por Loggro | 30 |
-| `responses_sample.json` | 10 respuestas sinteticas a un outreach (email y WhatsApp) con groundtruth para evaluar el clasificador del candidato | 10 |
-| `README.md` | Este archivo | 1 |
+| **[`ICP.md`](./ICP.md)** | Ideal Customer Profile escrito (criterios, señales, fuentes sugeridas) | Tu input principal. De acá derivas las cuentas a generar |
+| `accounts_example.json` | 30 cuentas ya enriquecidas en el formato esperado del output | **Solo referencia**. NO es tu input. Es el formato que tu output debe seguir |
+| `responses_sample.json` | 10 respuestas sintéticas (email + WhatsApp) con `groundtruth_intent` | Input para tu clasificador de respuestas + evaluación |
+| `README.md` | Este archivo | — |
 
-## Reglas de uso
+## Lo que tenés que producir
 
-1. **No contactar las empresas reales** del dataset. Hay companias verificables (Crystal, Haceb, Conconcreto, Frisby, etc.) listadas con `verified: true`. Son referencia, no objetivo comercial real.
-2. **No incluir datos sensibles** en los outputs del reto (telefonos reales, ingresos exactos, nombres de personas que no sean ficcion). Si necesitas mostrar contactos en tu demo, usa los nombres de `responses_sample.json` (todos ficticios).
-3. Este dataset es de **uso unico para el reto**. No redistribuir.
+### 1. Lista de ~100 cuentas nuevas (`accounts.json`)
+Cuentas que matchean el ICP, generadas por tu pipeline desde fuentes públicas. Schema en [ICP.md](./ICP.md).
 
-## Schema (`accounts.json`)
+### 2. Secuencia outbound (email + WhatsApp)
+Dos versiones por canal mínimo:
+- Cold initial (open)
+- Bump 1 (follow-up 3-5 días después)
 
-| Campo | Tipo | Notas |
-|---|---|---|
-| `id` | string | Formato `ACC-NNN` (001 a 030) |
-| `name` | string | Razon social o nombre comercial |
-| `domain` | string | Dominio web (mayoria `.com.co`) |
-| `sector` | string | Uno de: retail, manufactura, agropecuario, hoteleria, salud, logistica, construccion, servicios_profesionales, gastronomia, distribucion |
-| `employees_estimate` | int | 50 a 500 |
-| `city` | string | Ciudad principal de operacion |
-| `revenue_band` | string | `small_50_200`, `mid_200_500`, `upper_mid_500_1000` (COP MM anuales, banda referencial) |
-| `current_erp` | string or null | ERP/contable actual conocido o `null` si no se sabe |
-| `signals` | array of string | 2 a 4 observaciones publicas plausibles (vacantes, expansion, prensa) |
-| `verified` | bool | `true` si la empresa es real y verificable publicamente; `false` si es sintetica plausible |
+No 1 plantilla para todos. Tiene que adaptarse al sector y rol del destinatario.
 
-### Mix por sector
+### 3. Clasificador de respuestas
+Procesa las 10 entradas de `responses_sample.json` y devuelve el `intent` predicho. Compara contra `groundtruth_intent`.
 
-| Sector | Cantidad |
+### 4. Pipeline integrado
+Los 3 sub-agentes coordinados. Si recibimos una nueva cuenta y una nueva respuesta hipotética, debe correr end-to-end.
+
+## Sub-agentes esperados (sugerido)
+
+| Sub-agente | Qué hace |
 |---|---|
-| retail | 5 |
-| manufactura | 4 |
-| agropecuario | 3 |
-| hoteleria | 3 |
-| salud | 3 |
-| logistica | 3 |
-| construccion | 3 |
-| servicios_profesionales | 3 |
-| gastronomia | 2 |
-| distribucion | 1 |
+| **AccountFinder + Enricher** | Identifica cuentas que matchean el ICP, las enriquece con datos públicos |
+| **MessageWriter** | Genera mensajes outbound personalizados por sector + rol |
+| **ResponseClassifier** | Clasifica respuestas entrantes en intent (interesado / objecion / pedir_reunion / fuera_de_scope) |
 
-### Ejemplo (1 row)
-
-```json
-{
-  "id": "ACC-005",
-  "name": "Moda Express Cali",
-  "domain": "modaexpress.com.co",
-  "sector": "retail",
-  "employees_estimate": 160,
-  "city": "Cali",
-  "revenue_band": "small_50_200",
-  "current_erp": "Excel",
-  "signals": [
-    "Cadena de moda femenina con 12 tiendas en Valle del Cauca",
-    "Vacante publica de Jefe de Contabilidad (ago 2025)",
-    "Operacion aun apoyada en hojas de calculo segun perfil del CFO"
-  ],
-  "verified": false
-}
-```
-
-## Schema (`responses_sample.json`)
+## Schema de `responses_sample.json` (lo que recibe tu clasificador)
 
 | Campo | Tipo | Notas |
 |---|---|---|
-| `id` | string | Formato `RESP-NNN` (001 a 010) |
+| `id` | string | `RESP-NNN` (001 a 010) |
 | `channel` | string | `email` o `whatsapp` |
-| `account_id` | string | FK hacia `accounts.json` (campo `id`) |
-| `from` | string | Nombre + cargo de quien responde (todos ficticios) |
-| `received_at` | string | ISO 8601 con timezone `-05:00` (Colombia) |
-| `subject` | string or null | Solo para `channel = email`; `null` en WhatsApp |
-| `body` | string | Texto de la respuesta, espanol Colombia natural |
-| `groundtruth_intent` | string | Uno de: `interesado`, `objecion`, `fuera_de_scope`, `pedir_reunion` |
-| `confidence` | string | `high`, `medium`, `low`. Los `low` son ambiguos a proposito (estresan al clasificador) |
+| `account_id` | string | FK hacia las cuentas (en `accounts_example.json` y en las tuyas si las generas con esos IDs) |
+| `from` | string | Nombre + cargo del que responde (ficticio) |
+| `received_at` | string | ISO 8601 con timezone `-05:00` |
+| `subject` | string \| null | Solo para email |
+| `body` | string | Texto natural en español Colombia |
+| `groundtruth_intent` | string | `interesado` / `objecion` / `fuera_de_scope` / `pedir_reunion` |
+| `confidence` | string | `high` (6) / `medium` (2) / `low` (2). Los low son ambiguos a propósito |
 
-### Distribucion de intents
+Distribución:
+- 3 `interesado`, 3 `objecion`, 2 `fuera_de_scope`, 2 `pedir_reunion`
 
-| Intent | Cantidad |
-|---|---|
-| interesado | 3 |
-| objecion | 3 |
-| fuera_de_scope | 2 |
-| pedir_reunion | 2 |
+## Reglas duras
 
-### Distribucion de confidence
+1. **No hacemos outreach real**. El reto es construir el pipeline, no enviar correos a las cuentas que identifiques.
+2. **Cita fuentes** en cada cuenta. Sin fuente verificable → `confidence: low` + justificación.
+3. **Respeta TOS** de las plataformas que uses (LinkedIn especialmente — scraping agresivo está prohibido).
+4. **Empresas reales en tu output** se tratan como hipotéticas, no como leads. Si querés citarlas en tu demo o Loom, decilo explícito.
 
-| Confidence | Cantidad |
-|---|---|
-| high | 6 |
-| medium | 2 |
-| low | 2 |
+## Cómo se evalúa este track
 
-### Ejemplo (1 row)
+Ver [`eval/judge_prompt.md`](../../eval/judge_prompt.md) para la rúbrica de 5 dimensiones. Lo más específico de Track A:
 
-```json
-{
-  "id": "RESP-002",
-  "channel": "email",
-  "account_id": "ACC-021",
-  "from": "Felipe Restrepo (Gerente Administrativo y Financiero)",
-  "received_at": "2026-03-21T10:05:00-05:00",
-  "subject": "Re: Loggro para operadores logisticos",
-  "body": "Gregorio, buen dia. Si nos interesa explorar. Ya venimos evaluando moverNos de Excel hacia un ERP integrado y Loggro esta en la lista corta junto con World Office...",
-  "groundtruth_intent": "interesado",
-  "confidence": "high"
-}
-```
+- **Calidad del ICP match**: % de tus 100 cuentas que realmente cumplen el ICP
+- **Diversidad sectorial**: balance entre sectores listados
+- **Fuentes citadas**: URLs reales o justificación clara cuando no hay
+- **Dedupe**: tu pipeline detecta duplicados (mismo dominio, mismo NIT)
+- **Secuencia outbound**: adaptada a sector + rol, no template único
+- **Clasificador**: precisión contra los 10 cases del `responses_sample.json`
 
-## Como cruzar `responses` con `accounts`
+## Estado del dataset
 
-El campo `account_id` en `responses_sample.json` es la FK hacia el campo `id` en `accounts.json`. Ejemplo en Python:
-
-```python
-import json
-
-with open("accounts.json") as f:
-    accounts = {a["id"]: a for a in json.load(f)}
-
-with open("responses_sample.json") as f:
-    responses = json.load(f)
-
-for r in responses:
-    acct = accounts[r["account_id"]]
-    print(f"{r['id']} ({r['channel']}) -> {acct['name']} [{acct['sector']}, {acct['city']}]")
-```
-
-Esto permite al candidato:
-- Enriquecer la respuesta con sector, tamano, ciudad y senales de la cuenta antes de clasificar
-- Demostrar manejo de joins basicos en su pipeline (HubSpot, n8n, script propio, lo que use)
-- Medir si el clasificador mejora cuando recibe contexto de la cuenta vs solo el body de la respuesta
-
-## Notas sobre `verified`
-
-- `verified: true` (10 cuentas): empresas reales colombianas conocidas publicamente. Los `signals` son plausibles y consistentes con lo que se publica de ellas, pero NO se afirman hechos especificos no verificables (fechas exactas de vacantes, montos de inversion).
-- `verified: false` (20 cuentas): nombres y dominios construidos para verse plausibles. NO existen como empresas reales con esos datos exactos. Sirven para llenar el funnel sin riesgo de difamacion ni de outreach accidental.
-
-Si el candidato cita empresas `verified: true` en su demo, debe hacerlo como ejemplos hipoteticos, no como leads reales.
+- `accounts_example.json`: 30 cuentas (10 reales verificadas + 20 sintéticas plausibles) en formato canónico. **Solo referencia de formato**.
+- `responses_sample.json`: 10 respuestas. Versión final.
