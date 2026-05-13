@@ -2,7 +2,7 @@
 
 Reto tecnico para la vacante VE-1770 (Especialista en Automatizacion, IA y Growth).
 
-**Microsite con el contexto completo:** https://labs.loggro.com/reto
+**Microsite con el contexto completo:** https://labs.loggro.com/growth-engineer
 
 Si llegaste aca es porque pasaste el screening con Grego. Bienvenido. Antes de tocar codigo, leete el microsite. Este repo es solo la pista de aterrizaje.
 
@@ -20,7 +20,7 @@ Si llegaste aca es porque pasaste el screening con Grego. Bienvenido. Antes de t
 
 ```bash
 # 1. Clona desde el template
-gh repo create loggro-{track}-{tu-apellido} --template grrek/loggro-ai-challenge --private --clone
+gh repo create loggro-{track}-{tu-apellido} --template grrek/loggro-ai-challenge --public --clone
 cd loggro-{track}-{tu-apellido}
 
 # 2. Configura tu env
@@ -52,7 +52,7 @@ make eval
 |-- .env.example              virtual key del broker + base URL
 |-- data/
 |   |-- track-a-outbound/     30 cuentas + 10 respuestas sinteticas
-|   |-- track-b-insights/     20 campanas + 5 reportes GA + 3 transcripts
+|   |-- track-b-insights/     30 campanas activas Q1-Q2 2026 (JSON)
 |   |-- track-c-pieces/       3 briefs + 10 buenas + 10 malas piezas
 |   `-- track-d-intel/        9 MP3 (3 obligatorios + 1 edge case + 5 opcionales)
 |-- schemas/
@@ -82,7 +82,7 @@ make eval
 | Codigo | Nombre | Brief en 1 linea | Sub-agentes esperados |
 |---|---|---|---|
 | **A** | Outbound Automation | Sistema autonomo de prospeccion: scraping + enriquecimiento + secuencia email/WA + clasificacion | Enricher, MessageWriter, ResponseClassifier |
-| **B** | Marketing Insights | Sistema que cruza 20 campanas + GA + transcripts y genera 3 insights priorizados | DataIngestor, CampaignAnalyzer, InsightPrioritizer |
+| **B** | Marketing Insights | Sistema que analiza 30 campanas activas y genera 3 insights priorizados con deteccion de anomalias | DataIngestor, CampaignAnalyzer, InsightPrioritizer |
 | **C** | Generador de Piezas | Agente que recibe brief y genera piezas multi-canal con reviewer de brand voice | Copywriter, BrandVoiceReviewer, FormatPublisher, ImagePromptWriter |
 | **D** | Inteligencia de Conversaciones | Pipeline audio a insights: STT + objeciones + competidores + DIAN + risk + email follow-up | TranscriptionAgent, ObjectionExtractor, CompetitorMentionAgent, ComplianceSignalAgent, RiskScorer, FollowUpDrafter |
 
