@@ -9,29 +9,15 @@
 
 ## Como descargar los audios
 
-Los MP3 viven como assets del **GitHub Release** del repo (separado del arbol, para mantener el clone ligero):
+Los MP3 viven en `labs.loggro.com` (mismo dominio que el microsite). Coherente, sin dependencias adicionales:
 
-**Opcion 1: GitHub CLI (mas simple)**
+**Opcion 1: descargar las 5 obligatorias (recomendado)**
 
 ```bash
 # Desde la raiz del repo
-gh release download v1.0 \
-  --repo grrek/loggro-ai-challenge \
-  --dir data/track-d-intel/audio \
-  --pattern "*.mp3"
-```
-
-**Opcion 2: curl + URL directa**
-
-Cada MP3 esta en:
-```
-https://github.com/grrek/loggro-ai-challenge/releases/download/v1.0/call-NN-{scenario}-{duration}.mp3
-```
-
-Ejemplo para descargar las 5 obligatorias:
-```bash
+mkdir -p data/track-d-intel/audio
 cd data/track-d-intel/audio
-BASE="https://github.com/grrek/loggro-ai-challenge/releases/download/v1.0"
+BASE="https://labs.loggro.com/growth-engineer/audio"
 for f in call-01-cancellation-explore-08m30.mp3 \
          call-02-customer-call-07m45.mp3 \
          call-03-angry-customer-07m44.mp3 \
@@ -41,9 +27,31 @@ for f in call-01-cancellation-explore-08m30.mp3 \
 done
 ```
 
+**Opcion 2: descargar las 9 (incluyendo opcionales)**
+
+```bash
+mkdir -p data/track-d-intel/audio
+cd data/track-d-intel/audio
+BASE="https://labs.loggro.com/growth-engineer/audio"
+for n in 01-cancellation-explore-08m30 \
+         02-customer-call-07m45 \
+         03-angry-customer-07m44 \
+         04-prospect-deep-11m52 \
+         05-contacted-extended-17m40 \
+         06-quick-retail-03m04 \
+         07-pickup-call-08m34 \
+         08-inbound-06m35 \
+         09-unknown-edge-07m52; do
+  curl -L -O "$BASE/call-$n.mp3"
+done
+```
+
 **Opcion 3: navegador**
 
-Ir a https://github.com/grrek/loggro-ai-challenge/releases/tag/v1.0 y descargar manualmente.
+Cada MP3 esta en:
+```
+https://labs.loggro.com/growth-engineer/audio/call-{NN}-{scenario}-{duration}.mp3
+```
 
 El `.gitignore` del template ya excluye `*.mp3` para que no los re-pushees por accidente.
 
