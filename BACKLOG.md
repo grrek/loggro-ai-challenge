@@ -15,7 +15,7 @@ Lo que falta para que el repo template este 100% listo. Auditado 2026-05-13, sim
 | C | `data/track-c-pieces/briefs.json` | 1 entrada placeholder | 3 briefs (DIAN, cross-sell POS, retencion Nomina) | **2 briefs mas** |
 | C | `data/track-c-pieces/good_pieces.json` | 1 entrada placeholder | 10 piezas referencia que pasan brand voice (extraer de Meta Ad Library Loggro) | **9 piezas mas** |
 | C | `data/track-c-pieces/bad_pieces.json` | 1 entrada placeholder | 10 piezas que deberian rechazarse (LLM-generadas con flaws) | **9 piezas mas** |
-| D | `data/track-d-intel/*.mp3` | 0 archivos | 9 MP3 (3 obligatorios + 1 edge case + 5 opcionales) basados en los scripts en `docs/audio-scripts/` | **9 MP3s** |
+| D | `data/track-d-intel/audio/*.mp3` | ✅ **CERRADO** | 9 grabaciones reales Q2 2026 (5 obligatorias + 4 opcionales), filenames anonimizados, ~80 min total | — |
 
 ## 🟡 Importantes (no bloquean pero mejoran señal)
 

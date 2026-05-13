@@ -1,167 +1,76 @@
 {
-  "demo_A_contadora.mp3": {
-    "scene": "Demo modulo Facturacion Electronica DIAN a contadora pyme",
-    "location": "Bogota",
-    "speaker_0": {
-      "role": "vendedor_loggro",
-      "name": "Andres",
-      "voice_gender": "masculino",
-      "accent": "paisa_medellin"
-    },
-    "speaker_1": {
-      "role": "contadora_pyme",
-      "name": "Marcela",
-      "voice_gender": "femenino",
-      "accent": "bogotano",
-      "company_size_employees": 80,
-      "sector": "manufactura"
-    }
+  "call-01-cancellation-explore-08m30.mp3": {
+    "type": "obligatorio",
+    "scenario": "Explorar motivos de cancelacion de cliente existente",
+    "duration_seconds": 510,
+    "speakers_count_expected": 2,
+    "speakers_roles": ["agente_loggro", "cliente_cancelando"],
+    "expected_signals": ["objeciones_retencion", "motivo_churn", "competencia_mencionada", "posible_save"]
   },
-  "demo_B_cfo.mp3": {
-    "scene": "Demo Loggro Enterprise a CFO mid-market multi-compania",
-    "location": "Cali",
-    "speaker_0": {
-      "role": "vendedor_loggro",
-      "name": "Andres",
-      "voice_gender": "masculino",
-      "accent": "paisa_medellin"
-    },
-    "speaker_1": {
-      "role": "cfo_midmarket",
-      "name": "Carlos",
-      "voice_gender": "masculino",
-      "accent": "valluno_cali",
-      "company_size_employees": 350,
-      "sector": "manufactura_distribucion"
-    }
+  "call-02-customer-call-07m45.mp3": {
+    "type": "obligatorio",
+    "scenario": "Llamada con cliente identificado (gestion de relacion)",
+    "duration_seconds": 466,
+    "speakers_count_expected": 2,
+    "speakers_roles": ["agente_loggro", "cliente"],
+    "expected_signals": ["estado_relacion", "needs_emergentes", "nps_implicito"]
   },
-  "demo_C_negociacion.mp3": {
-    "scene": "Negociacion precio vs Siigo y World Office, retail mid-market",
-    "location": "Medellin",
-    "speaker_0": {
-      "role": "vendedor_loggro",
-      "name": "Andres",
-      "voice_gender": "masculino",
-      "accent": "paisa_medellin"
-    },
-    "speaker_1": {
-      "role": "gerente_general",
-      "name": "Patricia",
-      "voice_gender": "femenino",
-      "accent": "paisa_medellin",
-      "company_size_employees": 120,
-      "sector": "retail"
-    }
+  "call-03-angry-customer-07m44.mp3": {
+    "type": "obligatorio",
+    "scenario": "Cliente molesto (alta intensidad emocional)",
+    "duration_seconds": 464,
+    "speakers_count_expected": 2,
+    "speakers_roles": ["agente_loggro", "cliente_molesto"],
+    "expected_signals": ["objeciones_fuertes", "escalation_risk", "raiz_del_problema", "compromiso_de_resolucion"],
+    "challenge": "Audio con emociones intensas, posibles solapamientos y interrupciones. STT puede fallar mas en este."
   },
-  "edge_case_consent_denied.mp3": {
-    "scene": "Cliente niega consentimiento de grabacion en segundo 0:30",
-    "location": "no_especificado",
-    "speaker_0": {
-      "role": "vendedor_loggro",
-      "name": "Andres",
-      "voice_gender": "masculino",
-      "accent": "paisa_medellin"
-    },
-    "speaker_1": {
-      "role": "cliente_potencial",
-      "name": "Marcos",
-      "voice_gender": "masculino",
-      "accent": "neutro_colombiano",
-      "anonymized": true
-    },
-    "metadata": {
-      "consent_denial_at_seconds": 30,
-      "expected_pipeline_behavior": "marcar consent_denied=true; no procesar contenido posterior a denegacion para insights"
-    }
+  "call-04-prospect-deep-11m52.mp3": {
+    "type": "obligatorio",
+    "scenario": "Llamada larga a prospecto (descubrimiento + objeciones)",
+    "duration_seconds": 712,
+    "speakers_count_expected": 2,
+    "speakers_roles": ["agente_loggro", "prospecto"],
+    "expected_signals": ["fit_inicial", "objeciones_precio", "competidores_mencionados", "proximo_paso_claro"]
   },
-  "optional_followup_won.mp3": {
-    "scene": "Follow-up con cliente cerrado hace 3 meses, oportunidad cross-sell POS",
-    "location": "Pereira",
-    "speaker_0": {
-      "role": "vendedor_loggro",
-      "name": "Andres",
-      "voice_gender": "masculino",
-      "accent": "paisa_medellin"
-    },
-    "speaker_1": {
-      "role": "gerente_administrativa",
-      "name": "Liliana",
-      "voice_gender": "femenino",
-      "accent": "paisa_pereira",
-      "company_size_employees": 60,
-      "sector": "distribucion_alimentos"
-    }
+  "call-05-contacted-extended-17m40.mp3": {
+    "type": "obligatorio",
+    "scenario": "Llamada extendida con contacto (la mas larga, maximo contexto)",
+    "duration_seconds": 1060,
+    "speakers_count_expected": 2,
+    "speakers_roles": ["agente_loggro", "contacto"],
+    "expected_signals": ["sales_cycle_completo", "multiples_objeciones", "deal_size_estimable", "decision_maker_identificable"]
   },
-  "optional_hospitalidad.mp3": {
-    "scene": "Demo Loggro Alojamientos hotel boutique pre-temporada",
-    "location": "Cartagena",
-    "speaker_0": {
-      "role": "vendedor_loggro",
-      "name": "Andres",
-      "voice_gender": "masculino",
-      "accent": "paisa_medellin"
-    },
-    "speaker_1": {
-      "role": "gerente_hotel",
-      "name": "Diego",
-      "voice_gender": "masculino",
-      "accent": "costeno_cartagena",
-      "company_size_employees": 18,
-      "sector": "hoteleria_boutique"
-    }
+  "call-06-quick-retail-03m04.mp3": {
+    "type": "opcional",
+    "scenario": "Llamada corta a retail (3 min)",
+    "duration_seconds": 184,
+    "speakers_count_expected": 2,
+    "speakers_roles": ["agente_loggro", "decisor_retail"],
+    "expected_signals": ["intent_inicial", "fit_rapido_o_no", "follow_up_warm_o_cold"]
   },
-  "optional_nomina.mp3": {
-    "scene": "Demo Loggro Nomina a RRHH manufactura, novedades masivas",
-    "location": "Barranquilla",
-    "speaker_0": {
-      "role": "vendedor_loggro",
-      "name": "Andres",
-      "voice_gender": "masculino",
-      "accent": "paisa_medellin"
-    },
-    "speaker_1": {
-      "role": "lider_rrhh",
-      "name": "Tatiana",
-      "voice_gender": "femenino",
-      "accent": "costeno_barranquilla",
-      "company_size_employees": 200,
-      "sector": "manufactura"
-    }
+  "call-07-pickup-call-08m34.mp3": {
+    "type": "opcional",
+    "scenario": "Llamada donde un nuevo contacto contesta",
+    "duration_seconds": 514,
+    "speakers_count_expected": 2,
+    "speakers_roles": ["agente_loggro", "contacto_nuevo"],
+    "expected_signals": ["primera_impresion", "calificacion_basica"]
   },
-  "optional_deal_estancado.mp3": {
-    "scene": "Tercera llamada con prospecto que dilata, BANT fallando en Authority",
-    "location": "Bucaramanga",
-    "speaker_0": {
-      "role": "vendedor_loggro",
-      "name": "Andres",
-      "voice_gender": "masculino",
-      "accent": "paisa_medellin"
-    },
-    "speaker_1": {
-      "role": "director_administrativo",
-      "name": "Mauricio",
-      "voice_gender": "masculino",
-      "accent": "santandereano",
-      "company_size_employees": 90,
-      "sector": "servicios_profesionales"
-    }
+  "call-08-inbound-06m35.mp3": {
+    "type": "opcional",
+    "scenario": "Llamada entrante a agente (cliente busca al agente)",
+    "duration_seconds": 395,
+    "speakers_count_expected": 2,
+    "speakers_roles": ["cliente_o_lead", "agente_loggro"],
+    "expected_signals": ["intent_inbound", "razon_de_llamada", "urgencia"]
   },
-  "optional_referido.mp3": {
-    "scene": "Lead caliente por referido, calificacion MEDDPICC light",
-    "location": "Manizales",
-    "speaker_0": {
-      "role": "vendedor_loggro",
-      "name": "Andres",
-      "voice_gender": "masculino",
-      "accent": "paisa_medellin"
-    },
-    "speaker_1": {
-      "role": "gerente_operaciones",
-      "name": "Sandra",
-      "voice_gender": "femenino",
-      "accent": "paisa_manizales",
-      "company_size_employees": 70,
-      "sector": "manufactura"
-    }
+  "call-09-unknown-edge-07m52.mp3": {
+    "type": "opcional",
+    "scenario": "Edge case: contacto desconocido / posible wrong number",
+    "duration_seconds": 472,
+    "speakers_count_expected": 2,
+    "speakers_roles": ["agente_loggro", "contacto_desconocido"],
+    "expected_signals": ["es_lead_valido", "redireccionar_o_descartar"],
+    "challenge": "Puede ser un caso donde tu pipeline tiene que decir 'no es lead valido' en vez de inventar insights."
   }
 }
