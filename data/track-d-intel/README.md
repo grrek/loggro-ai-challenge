@@ -5,13 +5,47 @@
 | Archivo / carpeta | Contenido |
 |---|---|
 | `speaker_map.json` | Metadata por audio: tipo (obligatorio/opcional), escenario, duracion, señales esperadas |
-| `audio/*.mp3` | **9 grabaciones reales de Loggro** — NO commiteadas al repo publico por privacidad. Te llegan por correo / link privado al confirmar arranque |
+| `audio/.gitkeep` | Directorio vacio donde van los MP3 despues de descargarlos (siguiente paso) |
 
-## Como obtener los audios
+## Como descargar los audios
 
-Los MP3 contienen conversaciones reales con clientes (nombres, posibles telefonos, datos comerciales). **No los commiteamos al repo publico.** Cuando confirmes tu arranque por correo al lider del rol, te enviamos un link privado (Drive con permiso de view + descarga, o zip cifrado por WeTransfer). Validez del link: 48h (cubre toda tu ventana).
+Los MP3 viven como assets del **GitHub Release** del repo (separado del arbol, para mantener el clone ligero):
 
-Al recibirlos, colocalos en `data/track-d-intel/audio/` y procesalos. El `.gitignore` del template ya excluye `*.mp3` para que no los pushees por accidente.
+**Opcion 1: GitHub CLI (mas simple)**
+
+```bash
+# Desde la raiz del repo
+gh release download v1.0 \
+  --repo grrek/loggro-ai-challenge \
+  --dir data/track-d-intel/audio \
+  --pattern "*.mp3"
+```
+
+**Opcion 2: curl + URL directa**
+
+Cada MP3 esta en:
+```
+https://github.com/grrek/loggro-ai-challenge/releases/download/v1.0/call-NN-{scenario}-{duration}.mp3
+```
+
+Ejemplo para descargar las 5 obligatorias:
+```bash
+cd data/track-d-intel/audio
+BASE="https://github.com/grrek/loggro-ai-challenge/releases/download/v1.0"
+for f in call-01-cancellation-explore-08m30.mp3 \
+         call-02-customer-call-07m45.mp3 \
+         call-03-angry-customer-07m44.mp3 \
+         call-04-prospect-deep-11m52.mp3 \
+         call-05-contacted-extended-17m40.mp3; do
+  curl -L -O "$BASE/$f"
+done
+```
+
+**Opcion 3: navegador**
+
+Ir a https://github.com/grrek/loggro-ai-challenge/releases/tag/v1.0 y descargar manualmente.
+
+El `.gitignore` del template ya excluye `*.mp3` para que no los re-pushees por accidente.
 
 ## Sobre las grabaciones
 
